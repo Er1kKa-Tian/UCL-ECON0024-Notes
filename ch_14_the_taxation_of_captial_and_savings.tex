@@ -1,0 +1,82 @@
+\chapter{The Taxation of Capital and Savings}
+
+\fancyhead[L]{ECON0024}
+\fancyhead[C]{Ch.14 The Taxation of Capital and Savings}
+\fancyhead[R]{Xiaotian Tian}
+\fancyfoot[L]{\hyperlink{tableofcontents}{Back to Table of Contents}}
+\fancyfoot[R]{Xiaotian Tian}
+
+\section{Guiding Principles for Taxation of Savings}
+
+
+\section{$\star$ Optimal and Non-Optimal Taxation in An Inter-temporal Context}
+
+    \subsection{Simple Two-Period Model without Uncertainty}
+
+        \subsubsection{Setup}
+
+            Consider a 2 periods model where:
+            \begin{itemize}
+                \item An individual receives a fixed income/endowment $Y_1$ in period 1, and allocates it between consumption in period 1 $C_1$ and consumption in period 2 $C_2$
+                \item Savings $Y_1-C_1$ earn a risk-free rate of return $r$, and all the payout is consumed in period 2
+                \item All individuals can borrow or lend at this exogenous risk-free interest rate $r$
+                \item The individual only cares about consumption with a discount rate $\rho$
+            \end{itemize}
+
+        \subsubsection{Optimisation with No Tax}
+
+            In absence of taxation, the individual solves this maximisation:
+            
+            \begin{maxi}|s|{C_1,C_2}{V=U(C_1) + \frac{1}{1+\rho} \cdot U(C_2)}{\label{eqn:tax_intertemp_opt}}{}
+                \addConstraint{C_2}{=(1+r)\cdot (Y_1-C_1)}
+            \end{maxi}
+
+            This can be written as:
+            
+            \begin{equation*}
+                \max_{C_1} V = U(C_1) + \frac{1}{1+\rho} \cdot U\big( (1+r)\cdot (Y_1-C_1) \big)
+            \end{equation*}
+
+            Solving this, we obtain the first order condition and the familiar \emphb{Euler equation} for intertemporal allocation of consumption:
+
+            \begin{equation}
+                \color{red}
+                \frac{\partial V}{\partial C_1} = \frac{\partial U}{\partial C_1} - \frac{1+r}{1+\rho} \cdot \frac{\partial U}{\partial C_2} = 0
+                \iff
+                \text{IMRS} = \frac{\frac{\partial U}{\partial C_1}}{\frac{\partial U}{\partial C_2}} = \frac{1+r}{1+\rho}
+                \label{eqn:tax_intertemp_opt_result}
+            \end{equation}
+
+    \subsection{Pure Income Tax (Not Optimal)}
+
+        Suppose there is a tax on income at a constant rate $t$.
+
+        Then, the individual has to pay a tax of $tY_1$ on the endowment received in period 1 and a tax of $t \cdot r \cdot [(1-t)Y_1 - C_1]$ on the interest income received in period 2 (the principal is not taxed, only interest is taxed).
+
+        The optimisation problem becomes:
+
+        \begin{maxi}|s|{C_1,C_2}{V=U(C_1) + \frac{1}{1+\rho} \cdot U(C_2)}{\label{eqn:tax_intertemp_opt_income_tax}}{}
+            \addConstraint{C_2}{=[1+(1-t)r]\cdot [(1-t)Y_1-C_1]}
+        \end{maxi}
+
+        Solving this, we will get a different FOC and a different IMRS:
+
+        \begin{equation}
+            \color{red}
+            \frac{\partial V}{\partial C_1} = \frac{\partial U}{\partial C_1} - \frac{1+(1-t)r}{1+\rho} \cdot \frac{\partial U}{\partial C_2} = 0
+            \iff
+            \text{IMRS} = \frac{\frac{\partial U}{\partial C_1}}{\frac{\partial U}{\partial C_2}} = \frac{1+(1-t)r}{1+\rho}
+            \label{eqn:tax_intertemp_opt_income_tax_result}
+        \end{equation}
+
+        Different IMRS in equation \ref{eqn:tax_intertemp_opt_result} and \ref{eqn:tax_intertemp_opt_income_tax_result} indicates that, \empha{as a pure income tax incorporates tax on capital earnings, the rate of return deceases, distorting the inter-temporal allocation of consumption}.
+
+    \subsection{Pure Consumption Tax / VAT (Optimal)}
+
+        Suppose there is 
+
+    \subsection{Income Tax with Interest Exemption (Optimal)}
+
+    \subsection{Tax on Uncertain Returns / Tax on Capital Returns with Risk-free Return Exemption (Optimal)}
+
+    \subsection{Key Arguments for Taxing the Return to Savings}

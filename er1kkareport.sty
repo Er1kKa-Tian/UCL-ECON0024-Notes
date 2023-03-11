@@ -1,0 +1,55 @@
+%================================================================
+%Packages
+%================================================================
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr} % Headers and footers
+\usepackage[a4paper, total={6in, 10in}]{geometry} % Adjust page margins
+\usepackage{graphicx} %Package for including graphs
+\usepackage[usenames,dvipsnames]{xcolor} %Package for colours (with additional colours option)
+\usepackage{mathtools, amssymb} %Package for more beautiful Math exp
+\usepackage{float} %Better positioning of figures
+\usepackage{parskip} %Spacing between paragraphs
+\usepackage{optidef} %Easy way to define optimisation problems
+\usepackage{CJKutf8} %Chinese environment
+\usepackage{subcaption} %Advanced figure structures
+
+\usepackage{sectsty} %Colour headings
+    \chapterfont{\color{black}}  % sets colour of chapters
+    \sectionfont{\color{red}}  % sets colour of sections
+    \subsectionfont{\color{purple}} % sets colour of subsections
+    \subsubsectionfont{\color{RedViolet}} % sets colour of subsubsections
+
+\usepackage[Lenny]{fncychap} %Fancy chapter heading style (has to be loaded after sectsty)
+
+\usepackage{hyperref} %Clickable references and table of contents
+    \hypersetup{
+        colorlinks,
+        citecolor=violet,
+        filecolor=black,
+        linkcolor=violet,
+        urlcolor=violet
+    } %hyperref settings
+
+\usepackage[
+backend=biber,
+style=apa,
+]{biblatex} %Package for bibliography
+\addbibresource{reference.bib} %Imports bibliography file
+
+%Set colour and symbols for itemize
+\renewcommand{\labelitemi}{$\textcolor{CarnationPink}{\diamond}$}
+\renewcommand{\labelitemii}{$\textcolor{CarnationPink}{\ast}$}
+\renewcommand{\labelitemiii}{$\textcolor{CarnationPink}{\cdot}$}
+
+%Colourise enumerate
+\usepackage{enumitem}
+\setlist[enumerate]{font=\color{enumeratecolor}}
+\colorlet{enumeratecolor}{CarnationPink}% Default colour for \item in enumerate
+
+%================================================================
+%New commands
+%================================================================
+
+\newcommand{\empha}[1]{\textit{\color{Red}{#1}}}%Red emph
+\newcommand{\emphb}[1]{\textit{\color{blue}{#1}}}%Blue emph
+%\DeclareTextFontCommand{\emph}{\bfseries\em} %Redefine the command emph; Abandoned because it also affects the bibliography, and we cannot colour it

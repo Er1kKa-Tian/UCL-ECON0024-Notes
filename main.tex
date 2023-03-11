@@ -1,0 +1,122 @@
+%================================================================
+\iftrue
+
+
+\fi
+%================================================================
+%Preamble
+%================================================================
+
+\documentclass{report}
+
+\usepackage{er1kkareport}
+
+%================================================================
+%Title
+%================================================================
+
+\title{ECON0024 Economic Policy Analysis\\
+{\Large Lecture Notes for Academic Year 22/23}}
+\author{Xiaotian Tian, Kuangjie Ni, Kaicheng Lu，Haruka Shuei\thanks{Funded by no one, but thanks for support from my friends and teaching from UCL professors.}}
+\date{\today}
+%
+%================================================================
+%Main document
+%================================================================
+
+%Document Begins
+\begin{document}
+\begin{CJK*}{UTF8}{gbsn}%Begin Chinese environment
+
+\pagestyle{fancy}%Set page style
+
+\maketitle
+
+%Table of Contents
+\newpage
+    \hypertarget{tableofcontents}{\tableofcontents}
+\newpage
+
+%Chapters
+%Comment all other chapters when you are working on one particular chapter. Uncomment all chapters to compile the full version
+
+%Sample and Introduction
+\include{00_sample_chapter}
+\include{ch_0_introduction}
+
+%Topic 1: UI and MW
+\iftrue %Replace "iffalse" by "iftrue" if you want to render these chapters
+    \include{ch_1_unemployment_insurance}
+    \include{ch_2_minimum_wage}
+\fi
+
+%Topic 2: Health
+\iftrue
+   \include{ch_3_health_as_human_capital}
+   \include{ch_4_the_health_effects_of_early_interventions}
+\fi
+
+%Topic 3: Informality
+\iftrue
+    \begin{refsection} %Separate bibliography for each chapter
+        \include{ch_5_informality_and_development}
+        \printbibliography %Prints bibliography
+    \end{refsection}
+    \begin{refsection}
+        \include{ch_6_Informality_and_Labour_Market}
+        \printbibliography %Prints bibliography
+    \end{refsection}
+\fi
+
+%Topic 4: Monetary Policy
+\iftrue
+    \include{ch_7_Monetary_Policy_Objectives_and_Monitoring_the_Economy}
+    \include{ch_8_Estimating_the_Effects_of_Monetary_Policy}
+\fi
+
+%Topic 5: Education
+\iftrue
+    \begin{refsection} %Separate bibliography for each chapter
+        \include{ch_9_measuring_teacher_quality}
+        \printbibliography %Prints bibliography
+    \end{refsection}
+    \begin{refsection}
+        \include{ch_10_performance_pay_in_education}
+        \printbibliography %Prints bibliography
+    \end{refsection}
+\fi
+
+%Topic 6: Migration
+\iftrue
+    \begin{refsection} %Separate bibliography for each chapter
+        \include{ch_11_migration_migrant}
+        \printbibliography %Prints bibliography
+    \end{refsection}
+    \begin{refsection}
+        \include{ch_12_immigration_and_wages}
+        \printbibliography %Prints bibliography
+    \end{refsection}
+\fi
+
+%Topic 7: Tax
+\iftrue
+    \begin{refsection}
+        \include{ch_13_the_taxation_of_earnings}
+        \printbibliography
+    \end{refsection}
+    \begin{refsection}
+        \include{ch_14_the_taxation_of_captial_and_savings}
+        \printbibliography
+    \end{refsection}
+\fi
+
+%Bibliography
+\printbibliography %Prints bibliography
+
+%Appendix
+%\appendix
+%\include{appendix.tex}
+
+\end{CJK*}%End Chinese environment
+\end{document}
+%================================================================
