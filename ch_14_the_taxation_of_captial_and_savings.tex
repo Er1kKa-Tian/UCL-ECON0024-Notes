@@ -8,44 +8,64 @@
 
 \section{Guiding Principles for Taxation of Savings}
 
+    \subsection{Do Not Distort Optimal Individual Decisions}
+
+        Economic efficiency argument suggests that the trade-off between consuming today and consuming in the future that individuals face should reflect the return to investment in productive capacity in the economy. At equilibrium, the marginal rate of transformation of consumption goods should be the real interest rate.
+
+        If we define the normal return to be the return on a safe investment, then the normal return should reflect this trade-off. Individuals optimise accordingly, maximising their utility. \empha{Any tax/subsidy should not distort this trade-off, so taxing normal return on savings cannot be optimal.}
+
+        We will see this argument is subject to assumptions, and they will be discussed in the end (section \ref{subsec:taxing_normal_return}).
+
+    \subsection{Atkinson-Stiglitz Theorem (\cite{atkinson_design_1976})}
+
+        \cite{atkinson_design_1976} show that under \emphb{two key assumptions} that:
+        \begin{itemize}
+            \item All consumers have preferences separable between consumption and labour\\
+            This indeed states that the marginal benefit of consumption at anytime should not depend on labour supply
+            \item All consumers have the same preference over consumption (i.e. same sub-utility function of consumption)\\
+            This indeed states that all consumers are similar in their desire to smooth consumption across their life-cycle and across potentially uncertain states of the world
+        \end{itemize}
+
+        Under those assumptions, taxing consumption differently in the first- and the second- period is not optimal (taxing all savings is equivalent). The fundamental idea is \empha{we should not create a wedge between the intertemporal marginal rate of substitution (IMRS) and intertemporal marginal rate of transformation (IMRT) between consumer goods in different periods}.
+
 
 \section{$\star$ Optimal and Non-Optimal Taxation in An Inter-temporal Context}
 
-    \subsection{Simple Two-Period Model without Uncertainty}
+    Based on the guiding principles above, we use a simple model to show some insights on which kinds of taxes could be optimal.
 
-        \subsubsection{Setup}
+    \subsection{Setup: Simple Two-Period Model without Uncertainty}
 
-            Consider a 2 periods model where:
-            \begin{itemize}
-                \item An individual receives a fixed income/endowment $Y_1$ in period 1, and allocates it between consumption in period 1 $C_1$ and consumption in period 2 $C_2$
-                \item Savings $Y_1-C_1$ earn a risk-free rate of return $r$, and all the payout is consumed in period 2
-                \item All individuals can borrow or lend at this exogenous risk-free interest rate $r$
-                \item The individual only cares about consumption with a discount rate $\rho$
-            \end{itemize}
+        Consider a 2 periods model where:
+        \begin{itemize}
+            \item An individual receives a fixed income/endowment $Y_1$ in period 1, and allocates it between consumption in period 1 $C_1$ and consumption in period 2 $C_2$
+            \item Savings $Y_1-C_1$ earn a risk-free rate of return $r$, and all the payout is consumed in period 2
+            \item All individuals can borrow or lend at this exogenous risk-free interest rate $r$
+            \item The individual only cares about consumption with a discount rate $\rho$
+        \end{itemize}
 
-        \subsubsection{Optimisation with No Tax}
+    \subsection{Optimisation with No Tax}
 
-            In absence of taxation, the individual solves this maximisation:
-            
-            \begin{maxi}|s|{C_1,C_2}{V=U(C_1) + \frac{1}{1+\rho} \cdot U(C_2)}{\label{eqn:tax_intertemp_opt}}{}
-                \addConstraint{C_2}{=(1+r)\cdot (Y_1-C_1)}
-            \end{maxi}
+        In absence of taxation, the individual solves this maximisation:
+        
+        \begin{maxi}|s|{C_1,C_2}{V=U(C_1) + \frac{1}{1+\rho} \cdot U(C_2)}{\label{eqn:tax_intertemp_opt}}{}
+            \addConstraint{C_2}{=(1+r)\cdot (Y_1-C_1)}
+        \end{maxi}
 
-            This can be written as:
-            
-            \begin{equation*}
-                \max_{C_1} V = U(C_1) + \frac{1}{1+\rho} \cdot U\big( (1+r)\cdot (Y_1-C_1) \big)
-            \end{equation*}
+        This can be written as:
+        
+        \begin{equation*}
+            \max_{C_1} V = U(C_1) + \frac{1}{1+\rho} \cdot U\big( (1+r)\cdot (Y_1-C_1) \big)
+        \end{equation*}
 
-            Solving this, we obtain the first order condition and the familiar \emphb{Euler equation} for intertemporal allocation of consumption:
+        Solving this, we obtain the first order condition and the familiar \emphb{Euler equation} for intertemporal allocation of consumption:
 
-            \begin{equation}
-                \color{red}
-                \frac{\partial V}{\partial C_1} = \frac{\partial U}{\partial C_1} - \frac{1+r}{1+\rho} \cdot \frac{\partial U}{\partial C_2} = 0
-                \iff
-                \text{IMRS} = \frac{\frac{\partial U}{\partial C_1}}{\frac{\partial U}{\partial C_2}} = \frac{1+r}{1+\rho}
-                \label{eqn:tax_intertemp_opt_result}
-            \end{equation}
+        \begin{equation}
+            \color{red}
+            \frac{\partial V}{\partial C_1} = \frac{\partial U}{\partial C_1} - \frac{1+r}{1+\rho} \cdot \frac{\partial U}{\partial C_2} = 0
+            \iff
+            \text{IMRS} = \frac{\frac{\partial U}{\partial C_1}}{\frac{\partial U}{\partial C_2}} = \frac{1+r}{1+\rho}
+            \label{eqn:tax_intertemp_opt_result}
+        \end{equation}
 
     \subsection{Pure Income Tax (Not Optimal)}
 
@@ -71,12 +91,102 @@
 
         Different IMRS in equation \ref{eqn:tax_intertemp_opt_result} and \ref{eqn:tax_intertemp_opt_income_tax_result} indicates that, \empha{as a pure income tax incorporates tax on capital earnings, the rate of return deceases, distorting the inter-temporal allocation of consumption}.
 
-    \subsection{Pure Consumption Tax / VAT (Optimal)}
+    \subsection{Pure Consumption Tax / VAT (Could Be Optimal)}
 
-        Suppose there is 
+        Suppose that consumption in each period is taxed at a constant rate $\tau$.
+        
+        Then, a consumption $C_i$ requires an outlay/expenditure of $O_i=(1+C_i)\tau$. After period 1, savings will be $Y_1-O_1$, which generates an outlay/expenditure in period 2 of $O_2=(1+r) \cdot (Y_1-O_1)$. Consumption in period 2 will be $C_2=\frac{O_2}{1-\tau}$.
 
-    \subsection{Income Tax with Interest Exemption (Optimal)}
+        The optimisation problem becomes:
 
-    \subsection{Tax on Uncertain Returns / Tax on Capital Returns with Risk-free Return Exemption (Optimal)}
+        \begin{maxi}|s|{C_1,C_2}{V=U(C_1) + \frac{1}{1+\rho} \cdot U(C_2)}{\label{eqn:tax_intertemp_opt_vat}}{}
+            \addConstraint{C_2}{=\frac{(1+r)\cdot[Y_1 - (1+\tau)C_1]}{1+\tau}}
+        \end{maxi}
 
-    \subsection{Key Arguments for Taxing the Return to Savings}
+        Solving this, we will get the same IMRS as the case where there's no tax:
+
+        \begin{equation}
+            \color{red}
+            \frac{\partial V}{\partial O_1} = \frac{1}{1+\tau} \cdot \left( \frac{\partial U}{\partial C_1} - \frac{1+r}{1+\rho} \cdot \frac{\partial U}{\partial C_2} \right) = 0
+            \iff
+            \text{IMRS} = \frac{\frac{\partial U}{\partial C_1}}{\frac{\partial U}{\partial C_2}} = \frac{1+r}{1+\rho}
+            \label{eqn:tax_intertemp_opt_vat_result}
+        \end{equation}
+
+        IMRS are the same in equation \ref{eqn:tax_intertemp_opt_result} and \ref{eqn:tax_intertemp_opt_vat_result}. Therefore, \empha{a tax on consumption / VAT levied at a constant rate does not distort the intertemporal allocation}.
+
+    \subsection{Income Tax with Interest Exemption (Could Be Optimal)}
+
+        Suppose an income tax is collected, but it exempts interest income. In other words, only the endowment income in period 1 is taxed at a rate $\tau$. This is equivalent to a lump sum tax equals to $\tau Y_1$.
+
+        The optimisation problem becomes:
+
+        \begin{maxi}|s|{C_1,C_2}{V=U(C_1) + \frac{1}{1+\rho} \cdot U(C_2)}{\label{eqn:tax_intertemp_opt_int_exempt}}{}
+            \addConstraint{C_2}{=(1+r) \cdot [(1-t)Y_1 - C_1]}
+        \end{maxi}
+
+        Again, solving this, we will get the same IMRS as the case where there's no tax:
+
+        \begin{equation}
+            \color{red}
+            \frac{\partial V}{\partial C_1} = \frac{\partial U}{\partial C_1} - \frac{1+r}{1+\rho} \cdot \frac{\partial U}{\partial C_2} = 0
+            \iff
+            \text{IMRS} = \frac{\frac{\partial U}{\partial C_1}}{\frac{\partial U}{\partial C_2}} = \frac{1+r}{1+\rho}
+            \label{eqn:tax_intertemp_opt_int_exempt_result}
+        \end{equation}
+
+        IMRS are the same in equation \ref{eqn:tax_intertemp_opt_result} and \ref{eqn:tax_intertemp_opt_int_exempt_result}. Therefore, \empha{an income tax with interest exemption does not distort the intertemporal allocation}.
+
+    \subsection{Tax on Uncertain Returns / Tax on Capital Returns with Exemption on Risk-free Return (Could Be Optimal)}
+
+        In this setup, we have an capital income tax with exemption for risk-free rate of return on assets -- any supernormal/excess capital income will be taxed in period 2.
+
+        Specifically, now there are two kinds of assets: risky assets with uncertain return $r^R$ a safe asset with fixed return $r^f$. Income from the safe asset will not be taxed. Meanwhile, if risky assets actually provide a return higher than the risk-free rate $r^R=r^H>r^f$, then there will be a tax charge of $\tau (r^H-r^f)$ on each unit held.
+
+        Symmetrically, if the risky assets turn out to have a low return $r^R=r^L<r^f$, then there will be a tax rebate of $\tau (r^L - r^f)$ on each unit held.
+
+        Denote the amount of money invested in risky assets as $q^R$, the budget constraint will be:
+
+        \begin{equation*}
+            C_2 = (1+r^f)\cdot (Y_1 - C_1 - q^R) + [1-\tau(r^R-r^f)]\cdot q^R
+        \end{equation*}
+
+        Therefore, the optimisation becomes:
+
+        \begin{maxi}|s|{C_1,C_2}{V=U(C_1) + \frac{1}{1+\rho} \cdot U(C_2)}{\label{eqn:tax_intertemp_opt_uncertain}}{}
+            \addConstraint{C_2}{= (1+r^f)\cdot (Y_1 - C_1 - q^R) + [1-\tau(r^R-r^f)]\cdot q^R}
+        \end{maxi}
+
+        Solving this, we get:
+
+        \begin{equation}
+            \color{red}
+            \frac{\partial V}{\partial C_1} = \frac{\partial U}{\partial C_1} - \frac{1+r}{1+\rho} \cdot \frac{\partial U}{\partial C_2} = 0
+            \iff
+            \text{IMRS} = \frac{\frac{\partial U}{\partial C_1}}{\frac{\partial U}{\partial C_2}} = \frac{1+r}{1+\rho}
+            \label{eqn:tax_intertemp_opt_uncertain_result}
+        \end{equation}
+
+        The MRTS in equation \ref{eqn:tax_intertemp_opt_uncertain_result} is the same as in equation \ref{eqn:tax_intertemp_opt_result}, which means \empha{such taxation on "supernormal/excess" returns does not distort consumption allocations. Indeed, this is equivalent to a consumption tax}.
+
+    \subsection{Arguments for Taxing Excess Return to Savings}
+
+        As discussed in the previously, taxation on excess returns to savings does not distort consumption decisions. Indeed, if excess returns on savings reflect pure \emphb{rents} (e.g. ownership of land, monopoly firm, or resources), then excess income from savings should be taxed. The real question is "how much should be taxed?"
+
+    \subsection{Arguments for Taxing Normal Return to Savings}\label{subsec:taxing_normal_return}
+
+        In our simple framework discussed above, taxing normal return to savings cannot be optimal. However, there may be some practical deviations from our stylised model.
+
+        \subsubsection{"Tagging" High-abiliity Individuals -- Heterogeneity in Impatience and Cognitive Ability}
+
+            In experimental psychology there seems to be wide acceptance that higher-ability individuals are more patient (have higher discount rate). This implies people with high abilities, hence high earnings, also save more to consumer in period 2.
+
+            Then, if the rate of discount varies in such a predictable way, tax on normal return to savings is implicitly tax on high-ability individuals, which could be justified by redistributional purposes. This "tagging" idea aligns with Mirrless' view.
+
+        \subsubsection{Uncertain Earnings (due to ability/productivity uncertainties)}
+
+            If an individual is uncertain about his/her ability/productivity in the next period, he/she tend to have additional precautionary savings if he/she is risk-averse. In this case, taxing the return to capital/saving could be optimal, which is similar to taxing excess returns discussed before.
+
+        \subsubsection{Non-separable Preferences bewteen Consumption and Labour Supply}\label{subsubsec:non_separable_pref}
+
+            This is a deviation from assumptions in the Atkinson-Stiglitz framework. If individuals have non-separable preferences of consumption and labour supply, then it might make sense to tax less the goods that are complementary with labour supply. If second-period leisure is more complementary with consumption, taxing capital income could be justified.
