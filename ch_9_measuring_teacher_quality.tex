@@ -75,9 +75,9 @@
             
             Therefore, we \emphb{define teacher quality as the amount of learning observed in students taught by a particular teacher}.
             
-            The basic idea is to measure the performance of students in two tests across a time interval, take average of all students of a given teacher, and call that teacher quality. This is similar to the league tables in the UK.
+            The basic idea is to measure the performance of students in two tests across a time interval, take average of all students of a given teacher, and call that teacher quality. This is similar to the \emphb{league tables} in the UK.
 
-            Since this measure does not have an exact scale, we calculate the variance / standard deviation and use that as a scale.
+            \empha{Since this measure does not have an exact scale, we calculate the variance / standard deviation and use that as a scale.}
             
         \subsubsection{Setup}
             \begin{equation}
@@ -106,7 +106,7 @@
         \subsubsection{Interpretation and Distinguish Classroom FE}
             $\alpha$ is really a fixed effect of a regression -- it measures the average performance of students taught by a particular teacher, and we call it teacher quality.
             
-            Therefore, we will need to observe at least 2 groups of students taught by the same teacher in order to distinguish classroom/peer fixed effects and teacher fixed effects. If only observe one group per teacher, $\alpha$ combines both classroom/peer and teacher FE.
+            Therefore, we will need to observe at least 2 groups of students taught by the same teacher in order to distinguish classroom/peer fixed effects and teacher fixed effects. \empha{If only observe one group per teacher, $\alpha$ combines both classroom/peer and teacher FE.}
         
         \subsubsection{Scale}
             The magnitude of $\alpha$ does not have a direct interpretation. Thus, we compute the standard deviation of $\alpha$, noted as $\sigma_\alpha$, and use it as the unit for $\alpha$.
@@ -141,7 +141,7 @@
                 A_{ikt-1} = \theta A_{ik,t-2} + \gamma X_{ikt-1} + \alpha_{jt} + \epsilon_{ikt-1}
         \end{equation*}
 
-        He rejects that $\alpha_{jt}$'s are jointly equal to zero with $\sigma_{jt} \approx 0.08$. This suggests that there is \emphb{non-random sorting}.
+        He rejects that $\alpha_{jt}$'s are jointly equal to zero, and the standard error of $\alpha_{jt}$ is about 0.08 instead of around 0.1 estimated with standard models. This suggests that there is \emphb{non-random sorting}.
         
     \subsection{Chetty, Friedman, Rockoff 2014: Bias is Small}
 
@@ -190,10 +190,11 @@
 
     \subsection{Measurement Error}
 
-        In the \ref{eqn:edu_value_add_m}, suppose $\alpha_{jt}=\alpha_{j}$, we cannot observe $\alpha_j$ directly. Instead, we need to estimate it. This comes with an measurement error aroused due to sampling variation (with data from more years, this could be smaller):
+        In the \ref{eqn:edu_value_add_m}, suppose $\alpha_{jt}=\alpha_{j}$ (time-unvarying), we cannot observe $\alpha_j$ directly. Instead, we need to estimate it. This comes with an \emphb{measurement error} due to sampling uncertainty (with data from more years, this could be smaller):
         $$\widehat{\alpha_j}=\alpha_j + v_j$$
         Therefore, assume the measurement error $v_j$ is independent of $\alpha_j$:
         $$Var(\widehat{\alpha_j})=Var(\alpha_j)+Var(v_j)$$
+        
         Hence, $Var(\widehat{\alpha_j})$ overestimates $Var(\alpha_j)$. If the variance of measurement error is large, it will be hard to rank teachers based on $\widehat{\alpha_j}$.
 
     \subsection{Dealing with Measurement Error: Empirical Based Error Correction}
@@ -207,24 +208,30 @@
         
     \subsection{Dealing with Measurement Error and Distinguish Teacher / Classroom Effects}
 
-        If we have data of multiple years, this alternative method can deal measurement error and distinguish teacher and classroom effects at the same time.
+        If we have \empha{data of multiple years}, this alternative method can deal measurement error and distinguish teacher and classroom effects at the same time.
 
-        Firstly, we estimate the \ref{eqn:edu_value_add_m} for multiple years and get:
+        Firstly, we estimate the \ref{eqn:edu_value_add_m} for multiple years ($t \neq s$) and get:
         \begin{itemize}
             \item $\widehat{\alpha_{jt}}=\alpha_j + w_{jt} + v_{jt}$
             \item $\widehat{\alpha_{js}}=\alpha_j + w_{jt} + v_{js}$
         \end{itemize}
+        where:
+        \begin{itemize}
+            \item $\alpha$ is teacher's value added (teacher effect)
+            \item $w$ is classroom effect
+            \item $v$ is sampling error
+        \end{itemize}
         Assume that:
         \begin{itemize}
             \item Classroom shocks are serially uncorrelated and independent of $\alpha_j$: $Cov(w_{jt},w_{js})=0, (w_{jt},w_{js})\perp \alpha_j$
-            \item Sampling errors are serially uncorrelated and independent of $\alpha_j$: $Cov(w_{jt},w_{js})=0, (w_{jt},w_{js})\perp \alpha_j$
+            \item Sampling errors are serially uncorrelated and independent of $\alpha_j$: $Cov(v_{jt},v_{js})=0, (v_{jt},v_{js})\perp \alpha_j$
         \end{itemize}
         Then, we can calculate $Var(\alpha_j)$ by:
         $$Cov(\widehat{\alpha_{jt}},\widehat{\alpha_{js}}) = Cov(\alpha_j,\alpha_j) + \underbrace{Cov(w_{jt}+v_{jt},w_{js}+v_{js})}_{0} = Var(\alpha_j)$$
 
         The previous method can only eliminate $Var(v_{jt})$ and retrieve $Var(\alpha_j + w_{jt})$, which is a mixture of teacher/classroom FE, but this alternative method can also eliminate the variance of classroom FE.
         
-    \subsection{Fluctuatins in Teacher Quality}
+    \subsection{Fluctuations in Teacher Quality}
 
         \cite{chetty_measuring_2014} extended the model to allow for $\alpha_j$ to vary over time. Specifically, they use $\{ \alpha_{jt-T},\dots,\alpha_{jt-1} \}$ to predict $\alpha_jt$.
 
@@ -243,7 +250,7 @@
             \end{itemize}
             The outcome variables are: student test scores in math, teacher absences, subjective evaluations of teachers, whether teacher returns to DOE in the following year, whether  teacher returns to school in the following year.
     
-            Results: \emph{most characteristics are not significantly correlated with outcomes at all. Even for those with significant correlations, the magnitudes are tiny.}
+            Results: \empha{most characteristics are not significantly correlated with outcomes at all. Even for those with significant correlations, the magnitudes are tiny.}
 
         \subsubsection{Specific Results}
 
@@ -277,7 +284,7 @@
 
         \cite{jacob_principals_2005} alayse whether pricipals can identify good teachers.
 
-        They conclude that subjective principal assessments predict teacher value-added much better than teacher experience, education, and earnings. \emph{Principals are good at identifying the best and the worst teachers, but have trouble distinguishing between teachers in the middle of the distribution.}
+        They conclude that subjective principal assessments predict teacher value-added much better than teacher experience, education, and earnings. \empha{Principals are good at identifying the best and the worst teachers, but have trouble distinguishing between teachers in the middle of the distribution.}
 
 \section{Long-Term Impacts of Teachers}
 
@@ -285,7 +292,7 @@
 
         \cite{jacob_persistence_2008} conclude that teacher value-added in reading and math \emph{quickly erodes}. One year persistence is only around 20\%.
 
-        \cite{carrell_does_2008} explore the random assignment of students to teacher at USAF academy. They find that some teachers get high value-added by "teaching to the test," in order to get better teaching evaluations. The problem is that, by "teaching to the test," they do not teach deep concepts, resulting in low future value-added. Hence, \emph{teachers with low current value-added could have high future value-added}.
+        \cite{carrell_does_2008} explore the random assignment of students to teacher at USAF academy. They find that some teachers get high value-added by "teaching to the test," in order to get better teaching evaluations. The problem is that, by "teaching to the test," they do not teach deep concepts, resulting in low future value-added. Hence, \empha{teachers with low current value-added could have high future value-added}.
 
     \subsection{2 Studies on Long-Term Impacts of Teachers}
 

@@ -291,11 +291,12 @@
                 \item \emphb{Long-run Restrictions}: assume effects of some shocks die out at long horizons
                 \item \emphb{Sign Restrictions}: assume some elements in $A$ have certain signs (e.g. interest hike lowers inflation). This rules out some solutions for $A$ and gives us \emph{a range of possible values}, but not unique point estimates.
             \end{itemize}
+            
         \subsection{Alternative Method: Instrumental Variables}
 
-            Still using the structure of \ref{eqn:SVAR}, we ca use \emphb{instrumental variables} (e.g. an instrument that is correlated with monetary policy shock but not price or labour market shocks) to estimate the corresponding column of $A$.
+            Still using the structure of \ref{eqn:SVAR}, we can use \emphb{instrumental variables} (e.g. an instrument that is correlated with monetary policy shock but not price or labour market shocks) to estimate the corresponding column of $A$.
 
-            To implement this, we regress each series in $u_t$ on instrument $z_t$ by OLS (1st stage), then normalise the vector of coefficients by the coefficient of $u_{r,t}$ (reduced form) to get $A_{mp}$.
+            To implement this, we regress each series in $u_t$ on instrument $z_t$ by OLS, then normalise the vector of coefficients by the coefficient of $u_{r,t}$ to get $A_{mp}$.
 
         \subsection{Alternative Method: Local Projections (LP)}
 
@@ -306,7 +307,7 @@
                     y_{t+h}-y_{t-1}=a+\lambda_hr_t+\sum_{l=1}^p \kappa_l X_{t-l} +v_t
                     \tag{Local Projections}
                 \end{equation}
-                where $X_t-l$ is a set of controls (inflation, unemployment, etc.)
+                where $X_{t-l}$ is a set of controls (inflation, unemployment, etc.)
                 
                 The IRF at horizon $h$ is simply $\lambda_h$. However, note that, because $r_t$ is likely to be endogenous, $\lambda_h$ does not have a causal interpretation yet. It is just the response to the part of $r_t$ that is unpredictable by $X_{t-1}, \dots, X_{t-p}$.
 
@@ -388,6 +389,12 @@
                 "QE works in practice, but not in theory."
                 
             \subsubsection{Interpretability of Estimates}
+
+                We made some conceptual leaps to recover causal estimates:
+                \begin{itemize}
+                    \item Structural Shocks: central banks don't set interest rates at random and most of their policies are anticipated by the market. Does central banks have to do something surprising to have an effect, or anticipated changes can also be effective?
+                    \item Unrealistic assumptions made
+                \end{itemize}
             
         
     

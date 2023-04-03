@@ -38,9 +38,53 @@
 
     \subsection{Facts}
 
+        Income inequality has risen dramatically since 1970s:
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=4.5in]{images/ch13/13_inequality_1.png}
+            \caption{The Top Decile Income Share in the United States, 1917–2007 (\cite{atkinson_top_2011})}
+        \end{figure}
+
+        The income share increased the most for the top percentile:
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=4.5in]{images/ch13/13_inequality_2.png}
+            \caption{Decomposing the Top Decile US Income Share into three Groups, 1913–2007 (\cite{atkinson_top_2011})}
+        \end{figure}
+
+        Meanwhile, the income gap between different educational groups also increased:
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=4.5in]{images/ch13/13_inequality_3.png}
+            \caption{Median Wage Rate of Men Ages 25-55, 1976-2014 (\cite{blundell_income_2018})}
+        \end{figure}
+
 \section{Introduction to Tax System}
 
     \subsection{Example Tax and Benefit Systems}
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=4.5in]{images/ch13/13_taxscheme_1.png}
+            \caption{Income Tax Schedule for Those Aged Under 65, UK 2010-11 (Mirrlees Review, 2011)}
+        \end{figure}
+
+        And the tax rate could be different for different sources of income:
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=4.5in]{images/ch13/13_taxscheme_2.png}
+            \caption{Income Tax Schedule by Sources of Income for Those Aged Under 65, UK 2010-11 (Mirrlees Review, 2011)}
+        \end{figure}
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=4.5in]{images/ch13/13_taxscheme_3.png}
+            \caption{Budget Constraint for Single Parent in UK}
+        \end{figure}
     
     \subsection{Measuring Effective Tax Rates}
 
@@ -61,15 +105,26 @@
 
     \subsection{General Form of Earned Income Tax Credits (EITC)}
 
+        \subsubsection{Overview of EITC}
+
+        Definition of EITC: A subsidy given to low-income households in return for labour force participation.
+
+        Goals of EITC:
+        \begin{itemize}
+            \item To increase worker welfare
+            \item To offset high MTR and PTR created by income support, rent, and housing benefit schemes
+        \end{itemize}
+
         Some features of EITC:
         \begin{itemize}
-            \item Credit depends on earnings and number of children, and there are 3 sections:
+            \item Kinked benefits: credit depends on earnings and number of children, and there are 3 sections:
             \begin{enumerate}
                 \item Phase-in: credit is flat percentage of earned income or jumps at minimum hours threshold ($MTR<0$)
                 \item Flat range: receive maximum credit ($MTR=0$)
-                \item Phase-out: credit is phased out at a flat rate ($MTR>0$)
+                \item Phase-out: credit is phased out at a flat rate ($MTR>0$); in the UK, the phase-out region in non-linear to encourage full-time work
             \end{enumerate}
-            \item Credit is based on family earnings, creating "interesting" incentives among couples
+            \item Credit is based on family earnings and is typically increasing in the number of children
+            \item An individual must be participating the labour force to receive EITC (and subject to a minimal working hours eligibility constraint in the UK, which varies with family strucutres)
         \end{itemize}
 
         \subsubsection{EITC in U.S.}
@@ -118,6 +173,40 @@
                 \includegraphics[width=4in]{images/ch13/13_USUK_credit_compare.png}
                 \caption{The UK and US Tax Credit System Compared}
             \end{figure}
+
+        \subsubsection{Why are EITCs Typically Directed to Working Age Adults with Children?}
+
+            \begin{itemize}
+                \item To promote child welfare\\
+                Supporting a child in the early life could lead to higher human capital in the long run, promoting inter-generational welfare
+                \item To encourage parents with low skills/income to re-enter the labour market\\
+                Income tax credits can be interpreted as a boost of wages for those who are in low-wage professions, making parents less likely to stay at home (especially effective for working mothers due to their high labour supply elasticity)
+                \item To reduce the cost of childcare\\
+                With more disposable income, parents can spend more money instead of time on childcare, and hence increase their working time
+            \end{itemize}
+
+        \subsubsection{How EITCs Attempt to Balance the Dual Objectives of Work Incentives with Redistribution?}
+
+            In short, EITC schemes are designed to transfer incomes to households in the lower end of the income distribution while provide them with incentives to stay in the labour force.
+
+            An Case Study of the UK:
+            \begin{itemize}
+                \item Study the policy shift: family credits $\to$ working family tax credits (WFTC)
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[width=4in]{images/ch13/13_uk_casestudy_1.png}
+                    \end{figure}
+                \item Distributional effect (\cite{dilnot_family_1999}):
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[width=4in]{images/ch13/13_uk_casestudy_2.png}
+                    \end{figure}
+                \item Incentive effect: EITCs shifts up both the initial wage and the budget constraint and hence induces people to both participate in the labour market and work more (if substitution effects dominate). \cite{blundell_labour_2000} used simulation to show that both LFPR and hours worked increase for single parents earning median hourly wage:
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[width=4in]{images/ch13/13_uk_casestudy_3.png}
+                    \end{figure}
+            \end{itemize}
 
         \subsubsection{Bunching at Tax Kinks and the EITC}
 

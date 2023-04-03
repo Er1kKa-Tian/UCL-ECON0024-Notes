@@ -104,8 +104,9 @@
             $$\frac{\partial E[U]}{\partial b}=-(1-p)\times{\frac{p}{1-p}}\times{U'(w-\frac{p}{1-p}\times{b})} + p\times{U'(b)} = 0$$
             $$U'(b) = U'(w-\frac{p}{1-p}\times{b})$$
             $$\color{red} b = w-\frac{p}{1-p}\times{b}$$
-            
-            This result implies that $c^e = w-t = b = c^u$, i.e. \emphb{full insurance} -- people have the same income when unemployed as they were employed. In practice, this would mean that the net replacement rate = 1.
+            This result implies that
+            \[\color{red} c^e = w-t = b = c^u\]
+            which indicates \emphb{full insurance} -- people have the same income when unemployed as they were employed. In practice, this would mean that the net replacement rate = 1. (\empha{No moral hazard $\leadsto$ Full insurance})
             
 \section{$\star$ Optimal Unemployment Insurance with Moral Hazard}
 
@@ -141,9 +142,9 @@
             \color{red}
             \underbrace{\frac{U'(c^u)-U'(c^e)}{U'(c^e)}}_{\text{Insurance\ Value}} = \underbrace{\frac{1}{1-p}\times{\epsilon_{p,b}}}_{\text{Moral\ Hazard\ Cost}}
         \end{equation}
-        where $\epsilon_{p,b} = \frac{b}{p}\frac{dp}{db}$ is the \emphb{elasticity} of unemployment rate with respect to benefits.
+        where $\epsilon_{p,b} = \frac{b}{p}\frac{dp}{db}$ is the \emphb{elasticity of unemployment rate with respect to benefits}.
         
-        Note that the Main Equation of Optimal UI implies: if $\epsilon_{p,b}>0$, then $0<c^u<c^e<w$ which means \emphb{partial insurance} will be the optimum.
+        Note that the Main Equation of Optimal UI implies: if $\epsilon_{p,b}>0$, then $0<c^u<c^e<w$ which means \emphb{partial insurance} will be the optimum. (\empha{Moral hazard $\leadsto$ Partial insurance})
         
     \subsection{Explaining the Main Equation of Optimal UI}
         As in a typical optimum, the marginal benefit (insurance value) has to be equal to the marginal cost (moral hazard cost). If the marginal benefit (insurance value) is larger than the marginal cost (moral hazard cost), we need to increase the UI benefit to reach optimum, v.v.
@@ -198,7 +199,7 @@
                 \item \textbf{Key disadvantage}: the derivation of the Main Equation of Optimal UI depends critically on the \emph{envelop theorem} which only holds for small policy deviations (and we used the 1st order Taylor Expansion, which is a local approximation), so it cannot be used to assess the impact of radical changes
             \end{itemize}
 
-\section{Estimation of Moral Hazard}
+\section{Estimation of Moral Hazard ($\epsilon_{p,b}$)}
     Moral hazard in UI is thought to manifest itself in the duration of unemployment: economists investigate whether unemployed individuals find jobs more slowly when UI benefits are higher. The key challenge is to use quasi-experiments to identify these effects.
     
     \subsection{Difference-in-Difference}
@@ -224,10 +225,10 @@
             \begin{itemize}
                 \item $\alpha_s$ is the state fixed effect
                 \item $\theta_t$ is the time fixed effect
-                \item $X_ist$ includes other control variables
+                \item $X_{ist}$ includes other control variables
             \end{itemize}
-            $\beta$ identifies the relationship between percentage change in replacement rate and percentage change in unemployment duration under FE/FD 1-4. (Correct specification; Random sampling; Time variations and no perfect multicolinearity in regressors; Zero conditional mean)\\
-            Meyer (1990) and many other implement this method using data on unemployment duration in the U.S. and state-level reforms. The general finding shows a benefit elasticity of 0.4-0.6: 10\% rise in unemployment benefits leads to about a 4-6\% increase in unemployment duration.
+            $\beta$ identifies the relationship between percentage change in replacement rate and percentage change in unemployment duration under FE/FD assumptions. (Correct specification; Random sampling; Time variations and no perfect multicolinearity in regressors; Zero conditional mean)\\
+            Meyer (1990) and many other implement this method using data on unemployment duration in the U.S. and state-level reforms. The general finding shows a \empha{benefit elasticity of 0.4-0.6}: 10\% rise in unemployment benefits leads to about a 4-6\% increase in unemployment duration.
         \end{enumerate}
             
     \subsection{Regression Discontinuity Designs}
@@ -298,7 +299,7 @@
                     \item Estimating Liquidity Effect: RDD exploiting the fact that firms are forced to pay a lump-sum severance payment equal to 2 months of previous salary to workers who are laid off after 3 years of service. Compare workers who are just below the 3 year cutoff with those just above, and look at the difference in their non-employment duration.
                 \end{itemize}
         
-\section{Evidence on Consumption Smoothing}
+\section{Evidence on Consumption Smoothing ($\frac{\Delta c}{c^e}$)}
     The evidence on consumption smoothing is more limited. The key constraint is data: while we have millions of observations of unemployment duration (administrative records), data on consumption is often restricted to surveys, which contain much less samples. (Typically, we need a large sample size to use RDD/RKD.)
     
     \subsection{Difference-in-Difference}
@@ -406,7 +407,7 @@
         Therefore, under this more realistic model, our current UI benefit level is lower than the optimal level.
     
 \section{Should UI Benefits Vary by the Business Cycle?}
-    Our optimization requires equalization of insurance value and moral hazard cost, which contain parameters: $\epsilon_{p,b}, \frac{\Delta c}{c^e}, \gamma$. If they vary with the business cycle, our optimal UI benefits should adjust accordingly. Thus, again, this is an empirical question.
+    Our optimization requires equalization of insurance value and moral hazard cost, which contain parameters: $p, \epsilon_{p,b}, \frac{\Delta c}{c^e}, \gamma$. If they vary with the business cycle, our optimal UI benefits should adjust accordingly. Thus, again, this is an empirical question.
     
     \subsection{Unemployment Duration and the Business Cycle}
         Schmieder, von Wachter and Bender (2011) conclude that, during recessions:
@@ -414,7 +415,7 @@
             \item the responsiveness of unemployment duration to an additional month of UI benefit is lower. ($\frac{dp}{db}$ is lower)
             \item the probability of employment is lower ($p$ is lower) 
         \end{itemize}
-        Therefore, the elasticity of unemployment rate with respect to benefits $\epsilon_{p,b}$ is lower in recessions. This in turn indicates lower moral hazard costs, and UI benefits should be higher in recessions to optimise.
+        Therefore, the \empha{elasticity of unemployment rate with respect to benefits $\epsilon_{p,b}$ is lower in recessions}. This in turn indicates lower moral hazard costs, and UI benefits should be higher in recessions to optimise.
         \begin{figure}[H]
             \centering
             \includegraphics[width=4in]{images/ch1/Schmieder.png}
@@ -422,10 +423,10 @@
         \end{figure}
         
     \subsection{Consumption Smoothing and the Business Cycle}
-    Kroft and Notowigdio (2015) replicate and extend works by Gruber (1997). They estimate how the effect of UI on the consumption drop upon unemployment varies with the state unemployment rate in the previous year. They do not find evidence for larger or smaller drop in consumption when unemployment is higher. Thus, we can conclude that the value of consumption smoothing does not vary with the business cycle.
+    Kroft and Notowigdio (2015) replicate and extend works by Gruber (1997). They estimate how the effect of UI on the consumption drop upon unemployment varies with the state unemployment rate in the previous year. They do not find evidence for larger or smaller drop in consumption when unemployment is higher. Thus, we can conclude that the \empha{value of consumption smoothing does not vary with the business cycle}.
     
     \subsection{Counter-cyclical UI Benefits}
-    As discussed in the two subsections above: during a recession, moral hazard costs decrease while insurance values do not change. Therefore, it is \emph{optimal to implement a counter-cyclical UI benefit scheme}: benefits should be larger in recessions and lower in booms.
+    As discussed in the two subsections above: during a recession, moral hazard costs decrease while insurance values do not change. Therefore, it is \empha{optimal to implement a counter-cyclical UI benefit scheme}: benefits should be larger in recessions and lower in booms.
     
 \section{Extension: Match Quality and Long-term Effects}
     We ignored another potential benefit of UI schemes in our simple model above: \emphb{improvements in match quality}. When people become unemployed and face the pressure of purchasing necessities, they may be forced to take worse jobs. For example, an experienced engineer may have no choice but to work in McDonald's. Provision of UI benefits may alleviate such mismatching.
@@ -439,4 +440,4 @@
         \item Nekoei and Weber (2015) use RDD to examine the effect of extending UI eligibility from 7.5 months to 9.5 months at age 42 in Austria. They find that non-employment duration increases by 3 days, and they also find positive effects on wages, suggesting that UI benefits improve matching quality.
     \end{itemize}
     
-    All in all, empirical results are contradictory. In reality, it is very likely that both match quality improvement and skill depreciation exist. The overall effect depends on which one dominates.
+    All in all, empirical results are contradictory. In reality, it is \empha{very likely that both match quality improvement and skill depreciation exist}. The overall effect depends on which one dominates.
