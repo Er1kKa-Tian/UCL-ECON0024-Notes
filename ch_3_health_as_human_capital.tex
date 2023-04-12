@@ -1,4 +1,5 @@
-\chapter{Health as Human Capital}
+\chapter[Health as Human Capital]{Health as Human Capital\raisebox{.3\baselineskip}{\normalsize\footnotemark}}
+\footnotetext{Written by Kuangjie Ni, Edited by Xiaotian Tian}
 
 \fancyhead[L]{ECON0024}
 \fancyhead[C]{Ch.3 Health as Human Capital}
@@ -256,16 +257,6 @@ addressing the social determinants of health (e.g. living conditions, education 
         \item time-inconsistent preference (procrastination: go to the gym); addictive goods - the government can nudge/remind people
         \item In order to make progress and develop effective policies, we need first to understand how health is produced.
 \end{itemize} 
-
-
-
-
-
-
-
-
-
-
 
 
 \section{$\star$ The Production of Health as Human Capital: The Grossman Model}
@@ -621,18 +612,16 @@ addressing the social determinants of health (e.g. living conditions, education 
                 \item High SES individuals can have an expanded PPF because of extra financial resources.
                 \item High SES individuals can have a lower rate of depreciation $\delta$ because of less stress. Thus, they will have a higher equilibrium health stock.
             \end{itemize}
-            \item \empha{Early health can causally affect SES} (\emphb{Health Selection}).
+            \item \empha{Early health can causally affect SES} (\emphb{Health Selection}).\\
+            For example, unhealthy child $\leadsto$ less educated $\leadsto$ lower SES $\leadsto$ poorer adult health
             
-            For example, unhealthy child $\to$ less educated $\to$ lower SES
-            
-            \item \empha{Both can be affected by third factors}.
-            
+            \item \empha{Both can be affected by third factors}.\\
             For example: time preferences (Fuchs’ hypothesis): people willing to delay gratification (high $\delta$) invest more in both health and education.
         \end{enumerate}
 
 \section{Education and Health: Causal Inference}
 
-    \subsection{Disparities by Education (Compulsory vs. Post-Compulsory)}
+    \subsection{Observed Difference in Health by Education (Compulsory vs. Post-Compulsory)}
     
         \begin{figure}[H]
             \centering
@@ -647,14 +636,16 @@ addressing the social determinants of health (e.g. living conditions, education 
         
         Literature has used different approaches to establish causality:
         \begin{itemize}
-            \item First set of studies: used \emphb{instrumental variables} with questionable instruments for education (e.g. quarter of birth), finding strong effects.
+            \item First set of studies: used \emphb{instrumental variables} with questionable instruments for education (e.g. quarter of birth), finding \empha{strong effects}.
             \item Second set of studies: exploited \emphb{features of the educational system}:
             \begin{itemize}
-                \item Lleras-Muney (RevStud, 2005) uses compulsory school and child labour laws in thirty states from 1915 to 1939 as instruments for education and finds a significant effect in reducing mortality (using \emphb{DiD}).
-                \item Clark and Royer (AER, 2013) use regression discontinuity methods (\emphb{RDD}) exploiting two changes to British compulsory schooling laws and find no effects on mortality or other measures of health (discussed in detail in Section \ref{clark_royer_RDD}). Similar results in a recent paper by Janke, Johnston, Propper et al. (JHE, 2018).
+                \item Lleras-Muney (RevStud, 2005) uses compulsory school and child labour laws in thirty states from 1915 to 1939 as instruments for education and finds a \empha{significant effect in reducing mortality} (using \emphb{DiD}).
+                \item Clark and Royer (AER, 2013) use regression discontinuity methods (\emphb{RDD}) exploiting two changes to British compulsory schooling laws and find \empha{no effects on mortality or other measures of health} (discussed in detail in Section \ref{clark_royer_RDD}). Similar results in a recent paper by Janke, Johnston, Propper et al. (JHE, 2018).
             \end{itemize}
-            \item Third set of studies: \emphb{twin differences} (different between twins, NOT DiD!) (Lundborg, JPopEc 2013). Discussed in detail in Section \ref{lundborg_twin_diff}.
-            \item Fourth set of studies: more “\emphb{structural}” models (Conti et al., 2010a,b; Heckman et al., 2018).
+            \item Third set of studies: \emphb{twin differences} (different between twins, NOT DiD!) (Lundborg, JPopEc 2013). It suggests that \empha{completing high school improves health, but additional schooling does not lead to additional health gains}. Controlling for certain early life factors that may vary within twin pairs does not alter the main conclusions. Discussed in detail in Section \ref{lundborg_twin_diff}.
+            \item Fourth set of studies: more “\emphb{structural}” models: Conti et al., 2010a,b show that \empha{education has a causal component in most outcomes, but with dramatic heterogeneity}; Heckman et al., 2018 sets up a dynamic model and show that \empha{completing high school is especially effective}. See section \ref{sec:structual_health}.
+            \item Recent literature: disagreement still exists. See section \ref{sec:health_edu_recent}.
+            \item Summary: Grossman (NBER wp 21609, 2015) “The Relationship between Health and Schooling: What’s New?” concludes “There is enough \empha{conflicting evidence} in the studies that I have reviewed to warrant more research on the question of whether more schooling does in fact cause better health outcomes.”
         \end{itemize}
 
     \subsection{Clark and Royer: RDD (AER, 2013)}\label{clark_royer_RDD}
@@ -672,31 +663,27 @@ addressing the social determinants of health (e.g. living conditions, education 
             \end{itemize}
             The vertical lines are cutoffs corresponding to the first cohorts subject to the new compulsory schooling laws. Since the two compulsory schooling reforms affected 14 (first reform) and 15 (second reform) years old, the first cohorts impacted are those born in April 1933 for the first reform and September 1957 for the second reform.
                      
-            The 1947 change reduced the fraction that completed nine years or less by roughly one half; the 1972 change decreased the fraction that completed ten years or less by roughly one quarter. Hence, the reforms did increase students' years of education and \emphb{reduce the number of students who dropped out at a particular age.}
+            The 1947 change reduced the fraction that completed nine years or less by roughly one half; the 1972 change decreased the fraction that completed ten years or less by roughly one quarter. Hence, the reforms did increase students' years of education and reduce the number of students who dropped out at a particular age.
 
-        \subsubsection{Discontinuity of the Running Variable}
+        \subsubsection{Nature of Discontinuity}
             \begin{figure}[H]
                 \centering
-                \includegraphics[width=4in]{images/ch3/36.png}
+                \includegraphics[width=5in]{images/ch3/36.png}
                 \caption{The Impact of the Compulsory Schooling Changes on Educational Attainment}
             \end{figure}
-            Here, our running variable is the \emphb{probability of completing certain years of education}.
+            
+            Here, our \empha{running variable is time}: at certain time spot, there are \empha{``jumps'' in average years of education}.
     
-            Specifically:
-            \begin{itemize}
-                \item To examine the effect of the law changes on educational attainment, we begin by graphing the relationship between the birth cohort and the probability of completing less than nine and less than ten years of education.
-                \item The 1947 change reduced the fraction of individuals completing nine or fewer years of education by around 0.5. The 1972 change decreased the fraction completing ten or fewer years of education by around 0.25.
-                \item The 1947 change increased the years of education of the 1933 cohort by around 0.5 years. The 1972 change increased the years of education of the 1957 cohort by around 0.3 years.
-            \end{itemize}
 
-        \subsubsection{Outcome}
+        \subsubsection{Outcomes}
+
             \begin{figure}[H]
                 \centering
                 \includegraphics[width=4in]{images/ch3/37.png}
                 \caption{The Impact of the Compulsory Schooling Changes on Mortality}
             \end{figure}
 
-            Outcome variable 1: \emphb{mortality}: The two compulsory schooling laws have no effect on mortality (no discontinuity).
+            \empha{Outcome variable 1: Mortality}: The two compulsory schooling laws have no effect on mortality (no discontinuity).
      
             \begin{figure}[H]
                 \centering
@@ -704,7 +691,7 @@ addressing the social determinants of health (e.g. living conditions, education 
                 \caption{The Impact on Reporting Being in Fair or Worse Health in the 2001 Census}
             \end{figure}  
             
-            Outcome variable 2: \emphb{health fair or bad and long-standing illness}: The reforms cause no change in health fair or bad and long-standing illness.
+            \empha{Outcome variable 2: Health Fair/Bad or Long-standing Illness}: The reforms cause no change in health fair or bad and long-standing illness.
 
 
             \begin{figure}[H]
@@ -714,7 +701,7 @@ addressing the social determinants of health (e.g. living conditions, education 
                 \label{fig:rosla_plot}
             \end{figure} 
 
-            \emphb{Other outcome variables}: Another recent paper did the same reform and showed that only the prevalence of cardiovascular diseases was affected by the reform.
+            \empha{Other outcome variables}: Another recent paper analysed the same reform and showed that only the prevalence of cardiovascular diseases was affected by the reform.
 
         \subsubsection{Conclusion}
             \empha{Higher education attainment shows nearly no effect on health conditions (at least at the cutoff).}
@@ -729,196 +716,175 @@ addressing the social determinants of health (e.g. living conditions, education 
 
     \subsection{Lundborg, Journal of Population Economics 2013: Twin Differences}\label{lundborg_twin_diff}
         
-        \subsubsection{Education (Endogenous)}
-            $$Y_i = \alpha_0+\alpha_1 eduyrs_i+\alpha_2 X_i+\eta_i$$
-                    where  $Y_i$ is the BMI of one twin
-            
-            Take the difference between twins' BMIs:
-            
-            $$\Delta Y = \beta_0+\beta_1\Delta eduyrs+\beta_2 \Delta X+\Delta \eta$$
-            where  $\Delta Y=Y_i-Y_j$ 
-            
-            This is a fixed-effect regression.
-            
-            However, $\beta_1$ will not be interpreted as the causal effect of education on health, as education is a choice, which is likely to be correlated with the error term (ability/effort/parents' investment), so we need an instrument for $\Delta eduyrs$.
+        The usual setup in twin studies:
+
+        \[ Y_i = \alpha_0+\alpha_1 eduyrs_i+\alpha_2 X_i+\eta_i \]
         
-        \subsubsection{Birth Weight (Exogenous)}
-            However, if we estimate
-            
-            $$\Delta Y = \gamma_0+\gamma_1\Delta BW+\gamma_2 \Delta X+\Delta \eta$$
-            
-            where BW is the birth weight,
-            
-            $\gamma_1$ identifies the causal effect of birth weight difference on BMI difference, as birth weight is predetermined.
-
-
-
-
-
-\subsection{Explaining the Gradient}
-\begin{enumerate}
-    \item Cutler and Lleras-Muney (JHE, 2010)
-
-\begin{itemize}
-
-        \item Cutler and Lleras-Muney (JHE, 2010) examine possible explanations for the relationship between education and health, using several datasets from US and UK. They use OLS regression and see \emphb{how much the coefficient goes down when adding additional covariates}.
-        \item They are able to explain two-thirds of the gradient.
-        \item "Economic resources" is able to explain 32 percent of the gradient. "Specific knowledge" is able to explain 12 percent of the gradient (US dataset). "Cognitive ability" seems to explain a lot in the UK dataset. "Tastes" and "Personality" explain a little and "social integration" explains somehow.
-\end{itemize}
+        where  $Y_i$ is certain health outcome.
         
-\begin{figure}[H]%option [H] means "strictly here"
+        Take the difference between twins' outcomes:
+        
+        \[ \Delta Y = \beta_0+\beta_1\Delta eduyrs+\beta_2 \Delta X+\Delta \eta \]
+        where  $\Delta Y=Y_i-Y_j$ 
+        
+        This is a fixed-effect regression, which eliminates effects of common characteristics between twins.
+        
+        However, $\beta_1$ cannot not be interpreted as the causal effect of education on health, as education is subject to selection and is likely to be correlated with the error term (endogeneity: ability/effort/parents' investment), so we still need an instrument for $\Delta eduyrs$.
+        
+        To address this concern, Lundborg exploits the unusually rich MIDUS data and examine to which extent his results are robust to controlling for differences in early life factors, such as parental treatment, \empha{within twin pairs}.
+
+        Lundborg concludes that \empha{completing high school improves health}, as measured through self-reported health, chronic conditions, and exercise behavior, but that \empha{additional schooling does not lead to additional health gains}. Controlling for certain early life factors that may vary within twin pairs does not alter the main conclusions.
+
+
+    \subsection{Explaining/Decomposing the Education-Health Gradient}
+
+        \subsubsection{Cutler and Lleras-Muney (JHE, 2010)}
+
+            \begin{itemize}
+                    \item Cutler and Lleras-Muney (JHE, 2010) examine possible explanations for the relationship between education and health, using several datasets from US and UK. They use OLS regression and see \empha{how much of the coefficient goes down when adding additional covariates}.
+                    \item They are able to explain two-thirds of the gradient.
+                    \item "Economic resources" is able to explain 32 percent of the gradient. "Specific knowledge" is able to explain 12 percent of the gradient (US dataset). "Cognitive ability" seems to explain a lot in the UK dataset. "Tastes" and "Personality" explain a little and "social integration" explains somehow.
+            \end{itemize}
+            \begin{figure}[H]%option [H] means "strictly here"
                 \centering
                 \includegraphics[width=4in]{images/ch3/41.png}
                 \caption{Share of education gradient explainable by different factors}
             \end{figure}
-            
-\item Conti and Hansman (JHE, 2013)
-            
-\begin{itemize} 
-        \item Conti and Hansman (JHE, 2013) test the robustness of Cutler and Lleras-Muney's (CLM) results by using alternative measures of child personality available in the National Child Development Study:
-\begin{itemize}
-        \item the Rutter Behavior Scale (ages 7, 11 and 16)
-        \item the British Social Adjustment Guide (BSAG, ages 7 and 11):
-\end{itemize}
-        \item CLM results show that adult personality explains very little of the education-health gradient, but Conti and Hansman (JHE, 2013) show that child personality contributes the education-health gradient to an extent nearly as large as cognition. 
-        \item Childhood matters.
-\end{itemize}
-\begin{figure}[H]%option [H] means "strictly here"
+                
+        \subsubsection{Conti and Hansman (JHE, 2013)}
+
+            \begin{itemize}
+                \item Conti and Hansman (JHE, 2013) test the robustness of Cutler and Lleras-Muney's (CLM) results by using alternative measures of child personality available in the National Child Development Study:
+                    \begin{itemize}
+                        \item the Rutter Behavior Scale (ages 7, 11 and 16)
+                        \item the British Social Adjustment Guide (BSAG, ages 7 and 11):
+                    \end{itemize}
+                \item CLM results show that adult personality explains very little of the education-health gradient, but Conti and Hansman (JHE, 2013) show that child personality contributes the education-health gradient to an extent nearly as large as cognition. 
+                \item \empha{Childhood matters.}
+            \end{itemize}
+
+            \begin{figure}[H]
                 \centering
                 \includegraphics[width=4in]{images/ch3/42.png}
                 \caption{How much education-health gradient is explained by cognition, personality and motivation}
             \end{figure} 
-\end{enumerate}
 
-
-\subsubsection{Child Socioemotional Traits Are Important Determinants of the Gradient}
-\begin{figure}[H]%option [H] means "strictly here"
+            \begin{figure}[H]
                 \centering
                 \includegraphics[width=4in]{images/ch3/43.png}
                 \caption{Decomposition of the Education-Health Gradient}
             \end{figure} 
 
-\begin{itemize}
-        \item Non-cognitive factors such as externalising and motivation are at least as important as cognition in explaining the gradient.
-\end{itemize}
+            Non-cognitive factors such as externalising and motivation are at least as important as cognition in explaining the gradient.
 
-\subsubsection{The Early Origins of the Gradient}
+    \subsection{Structural Models in Education-Health Gradient Decomposition}\label{sec:structual_health}
+        
+        \subsubsection{The Early Origins of the Gradient: Conti, Heckman et al. (AER, PPS, 2010a,b)}
 
-\begin{itemize}
-        \item Conti, Heckman et al. (AER, PPS, 2010a,b) decompose observed educational differentials into causal components and components due to selection on early childhood human capital endowments.
-        \item They incorporate both the health selection, the social causation and the third factors hypothesis.
-        \item They look at the mean effect of education on health (like previous literature) and also at heterogeneity in treatment effects for people with different early childhood endowments.
-        \item They quantify the proportion of the educational differential attributed to the causal effect of education vs. early life factors. 
-        \item Heckman, Humphries and Veramendi (JPE 2018) extend this framework into a dynamic model of schooling choice and estimate causal effects from multiple levels of schooling. Find substantial continuation value of schooling for high-ability individuals, but not for low ones beyond high school.
-        \item Conti et al. use the British Cohort Study (BCS70), a cohort of all individuals born in one week of April 1970 in the United Kingdom.
-        \item They estimate a semiparametric structural model of the choice of schooling (decision to stay on at 16) and the causal effect of schooling on a variety of outcomes at age 30: 
-        \begin{enumerate}
-            \item labour market (wages and employment)
-            \item health status (self-reported health, depression and obesity)
-            \item health behaviours (smoking, exercise)
-        \end{enumerate}
-        \item They model three childhood (age 10) endowments as determinants both of education and age 30 outcomes:
-        \begin{enumerate}
-            \item cognition (e.g. British Ability Scales)
-            \item noncognitive traits (e.g. locus of control)
-            \item health (height, head circumference)
-            \end{enumerate}
-          \item We want these three early childhood factors to affect education (if the child is more developed $\Rightarrow$ more able to learn $\Rightarrow$ acquire more education).  Education affects health. Also, these three factors affect health directly. With this structure, health is partly causally affected by education, and partly causally affected by early childhood factors.
-
-          
-\begin{figure}[H]%option [H] means "strictly here"
-                \centering
-                \includegraphics[width=4in]{images/ch3/44.png}
-                \caption{How education and early life factors share the causal effects on different health outcomes}
-            \end{figure}        
-\end{itemize}
-
-\begin{itemize}
-\item Education explains nearly nothing about the obesity of females. For daily smoking, education matters more than early life factors.
-\end{itemize}
-
-\subsubsection{The Effects of Childhood Endowments on the Probability of being a Daily Smoker at Age 30}    
-\begin{figure}[H]%option [H] means "strictly here"
-                \centering
-                \includegraphics[width=4in]{images/ch3/45.png}
-                \caption {The Effects of Childhood Endowments on the Probability of
-being a Daily Smoker at Age 30}
-            \end{figure} 
-
-\begin{itemize}
-    \item Cognition doesn't affect smoking. Non-cognitive factors (e.g. self-regulation and motivation) and physical health are equally important determinants of smoking.
-\end{itemize}
-
-\subsubsection{The Effects of Childhood Endowments on the Probability of being Obese at Age 30}    
-\begin{figure}[H]%option [H] means "strictly here"
-                \centering
-                \includegraphics[width=4in]{images/ch3/46.png}
-                \caption {The Effects of Childhood Endowments on the Probability of
-being Obese at Age 30}
-            \end{figure} 
+            \begin{itemize}
+                \item Conti, Heckman et al. (AER, PPS, 2010a,b) \empha{decompose observed educational differentials into causal components of education and components due to selection on early childhood human capital}. 
+                \item In their framework, early childhood factors affect health both through education and directly. Both channels are quantified.
+                    \begin{itemize}
+                        \item They estimate a semiparametric structural model of the choice of schooling (decision to stay on at 16) and the causal effect of schooling on a variety of outcomes at age 30:
+                        \begin{itemize}
+                            \item labour market (wages and employment)
+                            \item health status (self-reported health, depression and obesity)
+                            \item health behaviours (smoking, exercise)
+                        \end{itemize}
+                        \item Three childhood (age 10) endowments:
+                        \begin{itemize}
+                            \item cognition (e.g. British Ability Scales)
+                            \item noncognitive traits (e.g. locus of control)
+                            \item health (height, head circumference)
+                        \end{itemize}    
+                    \end{itemize}
+                \item They look at the mean effect of education on health (like previous literature) and also at heterogeneity in treatment effects for people with different early childhood endowments.
+                \item Data: British Cohort Study (BCS70), a cohort of all individuals born in one week of April 1970 in the United Kingdom.
+            \end{itemize}
             
-\begin{itemize}
-    \item Cognition matters little. Non-cognitive explains a little bit. Early physical health is the most important determinant of obesity.
-\end{itemize}
+            \empha{Outcomes:}
+            \begin{itemize}
+                \item Causal component of education and effects of childhood characteristics: \empha{educations and early childhood characteristics both have causal effects on most of the outcomes.}
+                    \begin{figure}[H]%option [H] means "strictly here"
+                        \centering
+                        \includegraphics[width=4in]{images/ch3/44.png}
+                        \caption{How education and early life factors share the causal effects on different health outcomes}
+                    \end{figure}
+                \item Specific Outcomes
+                \begin{itemize}
+                    \item Obesity
+                        \begin{figure}[H]%option [H] means "strictly here"
+                            \centering
+                            \includegraphics[width=4in]{images/ch3/46.png}
+                            \caption{The Effects of Childhood Endowments on the Probability of being Obese at Age 30}
+                        \end{figure} 
+                        Cognition matters little. Non-cognitive explains a little bit. Early physical health is the most important determinant of obesity.
+                    \item Smoking
+                        \begin{figure}[H]%option [H] means "strictly here"
+                            \centering
+                            \includegraphics[width=4in]{images/ch3/45.png}
+                            \caption{The Effects of Childhood Endowments on the Probability of being a Daily Smoker at Age 30}
+                        \end{figure} 
+                        Cognition doesn't affect smoking. Non-cognitive factors (e.g. self-regulation and motivation) and physical health are equally important determinants of smoking.
+                        \begin{figure}[H]%option [H] means "strictly here"
+                            \centering
+                            \includegraphics[width=4in]{images/ch3/47.png}
+                            \caption{Heterogeneity in the Effects of Education on Smoking}
+                        \end{figure} 
+                        \empha{Effects of education on smoking is heterogeneous}: beneficial effect of education is much bigger at the top of the cognitive ability distribution
+                \end{itemize}
+            \end{itemize}
 
-\subsubsection{Heterogeneity in the Effects of Education on Smoking}    
-\begin{figure}[H]%option [H] means "strictly here"
-                \centering
-                \includegraphics[width=4in]{images/ch3/47.png}
-                \caption {Heterogeneity in the Effects of Education on Smoking}
-            \end{figure} 
-            
-\begin{itemize}
-    \item The effects of later intervention (education) on smoking depend on the effects of early child interventions.
-    \item Heterogeneity in the effects (ATE=Average Treatment Effect) of post-compulsory education on smoking at age 30 as function of early endowments: education compensates for low early non-cognitive endowments and reinforces high early cognitive endowments.
-    \item First, the beneficial effect of education (ATE) is much bigger at the top of the cognitive ability distribution. This is particularly interesting in the case of smoking, as it is consistent with the interpretation that the information content on the dangers of smoking provided by post-compulsory education needs to be combined with the capacity to process that information in order to be effective. Second,  education compensates for poor noncognitive ability (increase motivation). Third, there is no heterogeneity in the effect of education along the distribution of the health endowment. 
- 
-\end{itemize}
+        \subsubsection{Evidence from a Dynamic Model: Heckman, Humphries and Veramendi (JPE 2018)}
 
-\subsubsection{Evidence from a Dynamic Model}  
-\begin{figure}[H]%option [H] means "strictly here"
+            \begin{figure}[H]%option [H] means "strictly here"
                 \centering
                 \includegraphics[width=5in]{images/ch3/48.png}
                 \caption {Evidence from a Dynamic Model}
-            \end{figure}
-\begin{itemize}
-    \item How additional level of education affects wages and health compared to previous education level
-    \item The shaded regions labelled “Observed” are the raw differences found in the data. The estimated average causal effects (displayed in the light blocks) are large and statistically significant for all outcomes except for the log PV wages for graduating from high school (compared to dropping out). For example, the left-most bar in panel A can be interpreted as follows: while high school graduates make, on average, 24 log points higher wages than high school dropouts, we find that the average causal effect of graduating from high school is, on average, 12 log points for the same population.
-    \item Panel C: The biggest reduction in smoking was seen in people with high school degrees compared to those without, and more than half of the effect can be explained by the causal effect of education. However, most of the reduction in smoking can be explained by the causal effect of education for people with college degrees compared to those without. The causal component depends on each level of education (as well as the quality of education).
-\end{itemize}
+                \end{figure}
 
-            
+            Heckman, Humphries and Veramendi (JPE 2018) extend the structural framework discussed above into a dynamic model of schooling choice and estimate causal effects from multiple levels of schooling. They find \empha{substantial continuation value of schooling for high-ability individuals, but not for low ones beyond high school.}
 
-\subsubsection{The State of the Literature}  
-\begin{itemize}
-    \item Recent review “The Effect of Education on Health and Mortality: A Review of Experimental and Quasi-Experimental Evidence” by T. Galama, A. LlerasMuney, H. van Kippersluis, Oxford Research Encyclopedia of Economics and Finance (2018).
-    \item Review evidence on the two most common preventable causes of mortality: smoking and obesity.
-    \item \textcolor{red}{“There is no convincing evidence of an effect of education on obesity, and the effects on smoking are only apparent when schooling reforms affect individuals’ track or their peer group, but not when they simply increase the duration of schooling.”}
-    \item “An effect of education on mortality exists in some contexts but not in others, and seem to depend on: (a) gender; (b) the labour market returns to education; (c) the quality of education; (d) whether education affects peers’ quality.”
-    \item Important step forward would be to understand the quality and content of further education, years beyond the minimum school leaving age, and both short-, medium-, and long-term outcomes.
-\end{itemize}
+            \begin{itemize}
+                \item The figure shows how additional level of education affects wages and health compared to previous education level
+                \item The black bars labelled “Observed” are the raw differences found in the data, and the gray bars are estimated causal components.
+                \item The estimated average causal effects are the highest for high schools.
+            \end{itemize}
+         
+    \subsection{The State of the Literature}\label{sec:health_edu_recent}
 
-\begin{figure}[H]%option [H] means "strictly here"
-                \centering
-                \includegraphics[width=3in]{images/ch3/49.png}
-                \caption {Does education really improve health? A Meta-Analysis}
-            \end{figure}
+        \begin{itemize}
+            \item Recent review “The Effect of Education on Health and Mortality: A Review of Experimental and Quasi-Experimental Evidence” by T. Galama, A. LlerasMuney, H. van Kippersluis, Oxford Research Encyclopedia of Economics and Finance (2018):
+                \begin{itemize}
+                    \item “There is no convincing evidence of an effect of education on obesity, and the effects on smoking are only apparent when schooling reforms affect individuals’ track or their peer group, but not when they simply increase the duration of schooling.”
+                    \item “An effect of education on mortality exists in some contexts but not in others, and seem to depend on: (a) gender; (b) the labour market returns to education; (c) the quality of education; (d) whether education affects peers’ quality.”
+                \end{itemize}
+            \item Important step forward would be to understand the quality and content of further education, years beyond the minimum school leaving age, and both short-, medium-, and long-term outcomes.
+            \item Some papers analyse the \emphb{publication bias} towards the positive effects of education on health.
+        \end{itemize}
 
-\begin{itemize}
-    \item Publication bias towards the positive effects of education on health.
-\end{itemize}
+    \subsection{Where Next?}
 
-\subsubsection{Where Next?}
-\begin{itemize}
-    \item Grossman (NBER wp 21609, 2015) “The Relationship between Health and Schooling: What’s New?” concludes “There is enough conflicting evidence in the studies that I have reviewed to warrant more research on the question of whether more schooling does in fact cause better health outcomes.”
-    \item Among promising areas of current and future research:
-    \begin{itemize}
-    \item Does schooling quality matter?
-    \item What are the mechanisms via which schooling influences health and health behaviours?
-    \item What is the role of genes?
-    \item What is the role of subjective expectations of returns?
-    \end{itemize}
-\end{itemize}
+        \begin{itemize}
+            \item Grossman (NBER wp 21609, 2015) “The Relationship between Health and Schooling: What’s New?” concludes “There is enough \empha{conflicting evidence} in the studies that I have reviewed to warrant more research on the question of whether more schooling does in fact cause better health outcomes.”
+            \item Among promising areas of current and future research:
+            \begin{itemize}
+            \item Does schooling quality matter?
+            \item What are the mechanisms via which schooling influences health and health behaviours?
+            \item What is the role of genes?
+            \item What is the role of subjective expectations of returns?
+            \end{itemize}
+        \end{itemize}
+
+\clearpage
+
+
+
+
+
+
+
+
 
 
 \section*{Bibliography}
