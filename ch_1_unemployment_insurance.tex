@@ -46,6 +46,7 @@
             \item Usually, the eligibility for UI must be a result of a layoff.
             \item The length and the level of UI benefits often depend on the amount and time length of contribution.
             \item Minimum contribution period and minimum contribution amount are often defined.
+            \item The relationship between contribution and benefit-level is often highly non-linear (benefit caps, minimum benefits).
         \end{itemize}
         
     \subsection{Net Benefit Replacement Rate}
@@ -55,7 +56,7 @@
 \section{$\star$ Optimal Unemployment Insurance with No Moral Hazard}
 
     \subsection{Expected Utility Model of Unemployment}
-        A typical objective considered by economist is to maximize agents' welfare given by expected utility.
+        A typical objective considered by economists is to maximize agents' welfare given by expected utility.
         
         Specifically, we can calculate the \emphb{expected utility} by:
         $$E[U] = (1-p)\times{U(c^e)} + p\times{U(c^u)} - \psi(1-p)$$
@@ -70,7 +71,7 @@
         \end{itemize}
         
             \subsubsection{Assumptions on the individual side}
-                Assume \emphb{no saving/borrowing}:
+                Assume \emphb{no saving/borrowing} and \emphb{homogeneous agents}:
                 \begin{itemize}
                     \item Consumption at employment equals to after-tax wage i.e. $c^e = w-t$
                     \item Consumption at unemployment equals to UI benefit i.e. $c^u = b$
@@ -115,7 +116,7 @@
         $$p=p(b),\ \frac{\partial p(b)}{\partial b}>0$$
         
     \subsection{Individuals' Response}
-        Now, individuals choose their probability of being unemployment $p$ given the unemployment benefit $b$:
+        Now, individuals choose their probability of being unemployed $p$ given the unemployment benefit $b$:
         $$\max_p E[U] = (1-p)\times{U(c^e)} + p\times{U(c^u)} - \psi(1-p)$$
         The FOC of this problem is:
         $$\frac{\partial E[U]}{\partial p}=-U(c^e)+E(c^u)+\psi'(1-p) = 0$$
@@ -161,7 +162,7 @@
     \subsection{Sufficient Statistic Approach}
     
         \subsubsection{Approximate the Main Equation of Optimal UI}
-            The term $\frac{U'(c^u)-U'(c^e)}{U'(c^e)}$ cannot be estimated because people's utility functions are not observed. In stead, we employ the 1st order Taylor Expansion. Expand $U'(c^u)$ around $c^e$:
+            The term $\frac{U'(c^u)-U'(c^e)}{U'(c^e)}$ cannot be estimated because people's utility functions are not observed. Instead, we employ the 1st order Taylor Expansion. Expand $U'(c^u)$ around $c^e$:
             $$U'(c^u) \approx U'(c^e) + U''(c^e)(c^u-c^e)$$
             Therefore:
             \begin{equation*}
