@@ -127,7 +127,7 @@
     
     \subsection{Student Sorting / Selection}
         Our standard value-added model introduced above depends on the critical assumption of \emphb{conditional random assignment}: conditional on $A$ and $X$, the assignment of students to teachers is random:
-        $$\epsilon_{ijt}\perp \alpha_{jt}|A_{ijt},X_{ijt}$$
+        $$(A_{0,ijt},A_{1,ijt})\perp \mathds{1}[j=J]|A_{ij,t-1},X_{ijt}$$
         This requires us to include all characteristics that jointly affect selection and outcome. In other words, we cannot have selection on unobservables.
         
     \subsection{Rothstein 2010: Evidence on Non-random Sorting}
@@ -190,7 +190,7 @@
 
     \subsection{Measurement Error}
 
-        In the \ref{eqn:edu_value_add_m}, suppose $\alpha_{jt}=\alpha_{j}$ (time-unvarying), we cannot observe $\alpha_j$ directly. Instead, we need to estimate it. This comes with an \emphb{measurement error} due to sampling uncertainty (with data from more years, this could be smaller):
+        In the \ref{eqn:edu_value_add_m}, suppose $\alpha_{jt}=\alpha_{j}$ (time-unvarying), we cannot observe $\alpha_j$ directly. Instead, we need to estimate it. This comes with a \emphb{measurement error} $v_j$ due to sampling uncertainty (with data from more years, this could be smaller):
         $$\widehat{\alpha_j}=\alpha_j + v_j$$
         Therefore, assume the measurement error $v_j$ is independent of $\alpha_j$:
         $$Var(\widehat{\alpha_j})=Var(\alpha_j)+Var(v_j)$$
@@ -199,16 +199,16 @@
 
     \subsection{Dealing with Measurement Error: Empirical Based Error Correction}
 
-        We can use the law of total variance to retrieve an estimate for $Var(\alpha_j)$:
-        $$Var(\widehat{\alpha_j})=\underbrace{Var(E[\widehat{\alpha_j}|j])}_{Var(\alpha_j)}+E[Var(\widehat{\alpha_j}|j)]$$
-        $$Var(\alpha_j)=Var(\widehat{\alpha_j})-E[Var(\widehat{\alpha_j})|j]$$
+        We can use the law of total variance to get an estimate of $Var(v_{j})$ and use it to retrieve $Var(\alpha_j)$:
+        $$Var(\widehat{\alpha_j})=\underbrace{Var(E[\widehat{\alpha_j}|j])}_{\approx Var(\alpha_j)}+\underbrace{ E[Var(\widehat{\alpha_j}|j)] }_{ \approx Var(v_{j}) }$$
+        $$Var(\alpha_j)\approx Var(\widehat{\alpha_j})-E[Var(\widehat{\alpha_j})|j]$$
         Here, $E[Var(\widehat{\alpha_j})|j]$ is just the variance of the FE, which could be obtained from the regression. Using it to proxy $Var(v_j)$, we can retrieve $Var(\alpha_j)$.
         
         However, this method cannot filter out variance from classroom FE shocks. With richer data, we may consider the next method.
         
     \subsection{Dealing with Measurement Error and Distinguish Teacher / Classroom Effects}
 
-        If we have \empha{data of multiple years}, this alternative method can deal measurement error and distinguish teacher and classroom effects at the same time.
+        If we have \empha{data of multiple years}, this alternative method can deal with measurement error while distinguish teacher and classroom effects at the same time.
 
         Firstly, we estimate the \ref{eqn:edu_value_add_m} for multiple years ($t \neq s$) and get:
         \begin{itemize}

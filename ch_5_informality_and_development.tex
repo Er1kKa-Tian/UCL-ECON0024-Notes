@@ -11,7 +11,7 @@
     \subsection{Definitions}
         \subsubsection{Legalistic Definition}
         
-            Informal firms and workers are those that \emph{operate at the margin of the relevant laws and regulations}. This excludes obviously illegal activities, such as drug smuggling, but includes unregistered/tax-evading firms.
+            Informal firms and workers are those that \empha{operate at the margin of the relevant laws and regulations}. This excludes obviously illegal activities, such as drug smuggling, but includes unregistered/tax-evading firms.
             
             We do NOT define informality by sizes.
             
@@ -56,7 +56,7 @@
             Informal firms are on average smaller, pay lower wages, have less educated owners, hire less educated employees, and earn lower profits.
             
             \subsection{Lack of Duality}
-                 Nevertheless, differences above do not necessarily indicate a \emphb{dualistic view}. Formal firms and informal firms coexist within narrowly defined industries, and there is a substantial overlap in the productivity distribution of formal and informal firms, even within industries:
+                 Nevertheless, differences above do not necessarily indicate a \emphb{dualistic view}. Formal firms and informal firms \empha{coexist} within narrowly defined industries, and there is a substantial overlap in the productivity distribution of formal and informal firms, even within industries:
                 \begin{figure}[H]
                     \centering
                     \includegraphics[width=5.5in]{images/ch5/duality.png}
@@ -111,7 +111,7 @@
                 \end{itemize}
                 
             \subsection{Employees' Perspective: Wage Gaps \& Income}
-                Considering all workers as a whole, there is no significant effect of informality on wages after controlling firm fixed effects. (Red boxes)
+                Considering all workers as a whole, there is no significant overall effect of informality on wages after controlling firm fixed effects. (Red boxes)
                 
                 For unskilled workers, being employed in the formal sector significantly increase their wages. However, for skilled workers, no such effect is observed. The reason behind this difference could be that the minimum wage becomes binding for the unskilled workers as they become formally employed. (Orange boxes)
                 \begin{figure}[H]
@@ -135,18 +135,18 @@
                 \end{figure}
                 \begin{itemize}
                     \item Graph a: informality is counter-cyclical: when there is a recession, the informal sector occupies a higher share in the economy, providing a potential buffer
-                    \item Graph b: this shows the probability with which workers find formal/informal jobs from unemployment, and it corroborates graph a: during the recession, unemployment in the formal sector shows a cyclical pattern, while unemployment in the informal sector is stable
+                    \item Graph b: this shows the probability with which workers find formal/informal jobs from unemployment, and it corroborates graph a: during the recession, it becomes harder to find a job in the formal sector while the job finding rate in the informal sector remains unchanged.
                     \item Graph c: during the recession, job separation (destruction/layoff) increases clearly, indicating worse job security in the informal sector, since there is no firing cost
-                    \item Graph d: stable formalisation but growing dis-formalisation during the recession (graphically)
+                    \item Graph d: direct transitions from informality to formality are procyclical (easy to see from graph) as they correlate negatively with unemployment rate; Direct transitions from formality to informality are also procyclical (less easy to see) but less volatile
                 \end{itemize}
             
 \section{$\star$ Modelling Informality}
     \subsection{Model Setup}
-        For now, we focus on the extensive margin only.
+        For now, we focus on the \emphb{extensive margin} only.
         Operating \emph{formally}, firms' profit function can be expressed as:
         $$\color{red} \pi_f(\theta) = (1-\tau_y)\underbrace{\theta F(k,l)}_{\equiv y(\theta)} - (1+\tau_w)w_fl -r_f k - \bar{c}_f$$
         Operating \emph{informally}, firms' profit function can be expressed as:
-        $$\color{red} \pi_f(\theta) = \Big[1-p\big(y(\theta)\big)\Big]\theta F(k,l) - w_il -r_ik$$
+        $$\color{red} \pi_i(\theta) = \Big[1-p\big(y(\theta)\big)\Big]\theta F(k,l) - w_il -r_ik$$
         where:
         \begin{itemize}
             \item $\tau_y$ is the revenue tax rate
@@ -157,10 +157,10 @@
             \item $l$ is the amount of labour employed
             \item $r_f, r_i$ are capital rents (usually assume $r_f<r_i$ because formal firms have access to more loans and are considered less risky)
             \item $k$ represents capital used
-            \item $p(y(\theta))$ represents the "cost of formality," increasing and convex in firm's output $y$
+            \item $p(y(\theta))$ represents the "cost of informality," increasing and convex in firm's output $y$
             \item $\bar{c}_f$ is the per-period fixed cost that only formal firms must pay
         \end{itemize}
-        Note that, in addition to those costs, formalisation of a firm must incur in a \emph{fixed registration cost}, which varies dramatically across countries.
+        Note that, in addition to those costs, formalisation of a firm must incur in a \emphb{fixed registration cost}, which varies dramatically across countries.
     
     \subsection{Policy Implications}
         Our model shows us that policymakers can incentive firms to formalise by:
@@ -182,7 +182,9 @@
                 \item Unit of analysis ($i$): typically firm or entrepreneur
                 \item $y_{it}$: formality dummy or share of formal firms
                 \item $\text{Treatment}_{it}$: formalisation treatment dummy (=1 if treated)
-            \end{itemize}
+                \item $X_i$ is a vector of Controls
+                \item ATE is identified ($\beta_{OLS} = E[Y_{1i}-Y_{0i}]$) under the assumption: $(Y_{1i},Y_{0i}) \perp D_i|X_i$ because there is no selection on levels/gains conditional on $X_i$
+.            \end{itemize}
         \subsubsection{Results}
             \begin{figure}[H]
                 \centering
@@ -217,7 +219,8 @@
                 \includegraphics[width=5.5in]{images/ch5/SL formal treatment 2.png}
                 \caption{Effects of Treatments on Formalisation}
             \end{figure}
-            The figure above shows the Intention-to-Treat (ITT) and Treatment on the Treated (ATT) estimates of corresponding treatment (on the rows). ITT is calculated by directly regressing the formality dummy on the treatment dummy and covariates. ATT is identified as LATE using invitation as an IV for treatment.\par
+            The figure above shows the Intention-to-Treat (ITT) and Treatment on the Treated (ATT) estimates of corresponding treatment (on the rows). ITT is calculated by directly regressing the formality dummy on the treatment dummy and covariates. ATT is identified as LATE using invitation as an IV for treatment. Put differently, ITT is the treatment effect of assignment while ATT/LATE is the treatment effect on compilers.
+
             Results indicate that only covering the fixed cost of registration is not enough to induce firms to formalise (ITT/ATT of treatment 1 are not significant). Treatment with additional money to cover ongoing costs are more effective, and their effects increase with the amount of payment, as indicated by figures in the red square.
             
         \subsubsection{Results: Effects of Formalisation on Firms' Performance}
