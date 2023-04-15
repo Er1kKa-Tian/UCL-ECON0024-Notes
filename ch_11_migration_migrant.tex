@@ -294,17 +294,17 @@
             where:
             
             \begin{itemize}
-                \item $EX_i$: potential experience (computed as Age-years of schooling-6)
+                \item $EX_i$: potential experience (computed as Age-years of schooling - 6)
                 \item $YSM_i$: Years since migration
-                \item $b_1^I$： increase in earnings for each year of source country work experience for immigrants
-                \item $b_2^I$: additional increase in earnings each year spent in host country
-                \item $b_1^I+b_2^I$: earnings increase per year in the host country
-                \item $b_1^N$: earnings increase of natives per year of labour market experience
+                \item $b_2^I$: measures the return to one year of total working experience (experience in host \& home country)
+                \item $b_3^I$: additional increase in earnings each year spent in host country
+                \item $b_2^I+b_3^I$: earnings increase per year in the host country
+                \item $b_2^N$: earnings increase of natives per year of labour market experience
             \end{itemize}
 
-            If $b_1^I+b_2^I > b_1^N$, earnings of immigrants grow faster in the host country than earnings of natives (\emphb{assimilation}).
+            If $b_2^I+b_3^I > b_2^N$, earnings of immigrants grow faster in the host country than earnings of natives (\emphb{assimilation}).
             
-            $\delta=b_1^I+b_2^I-b_1^N$ measures the \emphb{rate of convergence} of immigrant/native earnings, which represents the degree of economic assimilation.
+            $\delta=b_2^I+b_3^I-b_2^N$ measures the \emphb{rate of convergence} of immigrant/native earnings, which represents the degree of economic assimilation.
 
             \begin{figure}[H]
                 \centering
@@ -375,7 +375,7 @@
                 \item $t$ is an index indicating the year in which individual $i$ is observed
                 \item $X_{it}$ is a vector of individual characteristics, e.g. gender, marital status and educational level
                 \item $EX_{it}$ is potential work experience extrapolated from data
-                \item $T_{it}=\mathbb{1}[\text{Year of observation}=t]$ is a cross-section time indicating dummy which equals to 1 if individual $i$ is drawn from the cross-section in year $t$
+                \item $T_{it}=\mathds{1}[\text{Year of observation}=t]$ is a cross-section time indicating dummy which equals to 1 if individual $i$ is drawn from the cross-section in year $t$
                 \item $\gamma_{t}^I,\gamma_{t}^N$ measure the period/time effects on log wages of immigrants and natives
                 \item $C_{im}$ is an indicator function, which equals to the calendar year $m$ in which immigrant $i$ arrived
             \end{itemize}

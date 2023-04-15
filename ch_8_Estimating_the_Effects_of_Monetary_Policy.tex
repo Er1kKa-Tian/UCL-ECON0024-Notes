@@ -13,7 +13,7 @@
     
     \begin{itemize}
         \item We cannot conduct RCTs for monetary policies due to feasibility and morality reasons
-        \item We cannot rely on natural experiments because there will be no "control group"
+        \item We cannot rely on natural experiments because there will be no ``control group''
     \end{itemize}
 
     Therefore, we resort to econometric strategies and assumptions. We cannot simply regress outcomes on changes in interest rates due to endogeneity (simultaneity, feedback, etc.), and this will not inform us about the effectiveness of unconventional policies.
@@ -239,11 +239,12 @@
                 \item $E[\epsilon_t \epsilon_s]=0$ (no serially correlated)
             \end{itemize}
     
-            The full-rank matrix $A$ is the \emphb{Contemporaneous Response Matrix}. $A_{ij}$ us the effect of a unit shock $j$ on variable $i$ instantly, which is interpreted causally.
+            The full-rank matrix $A$ is the \emphb{Contemporaneous Response Matrix}. $A_{ij}$ is the effect of a unit shock $j$ on variable $i$ instantly, which is interpreted causally.
 
         \subsubsection{Estimate the Effects of Shocks with Assumptions}
 
-            $E[u_t]=AE[\epsilon_t]=A\times 0=0$ informs us nothing.\\
+            $E[u_t]=AE[\epsilon_t]=A\times 0=0$ informs us nothing.
+
             $Cov(u_t)=E[u_tu_t']=AE[\epsilon_t\epsilon_t']A'=AA'$ There are $n(n+1)/2$ equations with $n^2$ unknowns, so we need additional $n(n-1)/2$ restrictions to find a unique solution.
 
             The further assumptions restraining the unknowns (\emphb{SVAR assumption 2}) take the simplest form of recursive/timing restrictions: we restrict which variables can respond to which shocks contemporaneously. Technically, we impose that:
@@ -272,7 +273,7 @@
 
         \subsubsection{Structural Impulse Responses}
 
-            After estimated the corresponding coefficients in SVAR, we can cumpute the \emphb{structural impulse responses} -- the \emph{dynamic causal effects} of monetary policy.
+            After estimated the corresponding coefficients in SVAR, we can compute the \emphb{structural impulse responses} -- the \emph{dynamic causal effects} of monetary policy.
 
             The structural impulse response of a structural shock $\epsilon_j$ as time $t$ on variable $Y$ at time $t+h$ is:
             \begin{align*}
@@ -386,7 +387,7 @@
                 \end{itemize}
                 Early evidence shows strong effects of some form of forward guidance and asset purchases \emph{on financial markets}. On the other hand, there is less evidence on their effects on most important \emph{macroeconomic variables}: existing evidence suggests that quantitative easing was effective, but forward guidance is less so.
 
-                "QE works in practice, but not in theory."
+                ``QE works in practice, but not in theory.''
                 
             \subsubsection{Interpretability of Estimates}
 
