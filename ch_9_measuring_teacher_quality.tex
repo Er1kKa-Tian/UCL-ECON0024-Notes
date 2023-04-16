@@ -195,7 +195,7 @@
         Therefore, assume the measurement error $v_j$ is independent of $\alpha_j$:
         $$Var(\widehat{\alpha_j})=Var(\alpha_j)+Var(v_j)$$
         
-        Hence, $Var(\widehat{\alpha_j})$ overestimates $Var(\alpha_j)$. If the variance of measurement error is large, it will be hard to rank teachers based on $\widehat{\alpha_j}$.
+        Hence, $Var(\widehat{\alpha_j})$ overestimates $Var(\alpha_j)$. If the variance of measurement error is large, it will be hard/unreliable to rank teachers based on $\widehat{\alpha_j}$.
 
     \subsection{Dealing with Measurement Error: Empirical Based Error Correction}
 
@@ -227,7 +227,7 @@
             \item Sampling errors are serially uncorrelated and independent of $\alpha_j$: $Cov(v_{jt},v_{js})=0, (v_{jt},v_{js})\perp \alpha_j$
         \end{itemize}
         Then, we can calculate $Var(\alpha_j)$ by:
-        $$Cov(\widehat{\alpha_{jt}},\widehat{\alpha_{js}}) = Cov(\alpha_j,\alpha_j) + \underbrace{Cov(w_{jt}+v_{jt},w_{js}+v_{js})}_{0} = Var(\alpha_j)$$
+        $$Cov(\widehat{\alpha_{jt}},\widehat{\alpha_{js}}) = Cov(\alpha_j,\alpha_j) + \underbrace{Cov(\alpha_j,w_{jt}+v_{jt}) + Cov(\alpha_j,w_{js}+v_{js}) +Cov(w_{jt}+v_{jt},w_{js}+v_{js})}_{0} = Var(\alpha_j)$$
 
         The previous method can only eliminate $Var(v_{jt})$ and retrieve $Var(\alpha_j + w_{jt})$, which is a mixture of teacher/classroom FE, but this alternative method can also eliminate the variance of classroom FE.
         
