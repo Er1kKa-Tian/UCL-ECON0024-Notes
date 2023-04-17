@@ -347,7 +347,7 @@
             
             This is slope of line CC, which \empha{overestimates of immigrant wage growth if cohort effect is negative (later cohorts are worse)}. In other words, lower initial wages of subsequent cohorts may lead to an overestimate of cross-sectional wage profiles, while improvement in cohort quality leads to an underestimate.
 
-        \subsubsection{Deal with Cohort Effects}
+        \subsubsection{Problem of Chiswick (Algebraically) + Deal with Cohort Effects}
 
             We can solve this identification problem by \empha{adding another wave of cross-section}. Suppose now we also have access to 1980 census data. We can decompose the raw wage growth:
 
@@ -356,7 +356,21 @@
                 \frac{w_{50}^{70} - w_{60}^{70}}{10} = \underbrace{\frac{w_{60}^{80} - w_{60}^{70}}{10}}_{\text{Wage Growth for the 1960 Cohort}} - \underbrace{\frac{w_{50}^{70} - w_{60}^{80}}{10}}_{\text{Cohort Effect}}
             \end{equation*}
 
-            Again, we can see that, if later cohorts have a lower wage path (worse quality), $\frac{w_{50}^{70} - w_{60}^{70}}{10}$ will overestimate the speed of convergence.
+            Again, we can see that:
+
+            $$\begin{cases}
+                \text{Quality improves over time} & \implies \text{Cohor Effect}<0\implies \text{Underestimatin of convergence} \\
+                \text{Quality worsens over time} & \implies \text{Cohor Effect}>0\implies \text{Overestimation of convergence}
+            \end{cases}$$
+
+            To deal with this, since we have 2 cross-sections (1970, 1980) now, we can estimate:
+
+            $$
+            \Delta w=\frac{w_{50}^{70}-w_{50}^{80}}{30-20}
+            $$
+
+            However, this FD estimator can only eliminate time-unvarying fixed effect (cohort effect), but it cannot control for differences in macroeconomic conditions (time effects) in 1970 and 1980
+
         
         \subsubsection{Deal with Cohort Effects + Time Effects}
 
