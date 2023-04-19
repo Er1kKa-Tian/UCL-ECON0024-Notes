@@ -319,7 +319,7 @@
                 The implementation is just like 2SLS:
                 \begin{itemize}
                     \item First stage: regress $r_t$ on IV $z_t$ and controls (lags of $X$); predict $\hat{r}_t$
-                    \item Second stage: regress $(y_{t+h}-t_{t-1})$ on $\hat{r}_t$ and controls (lags of $X$)
+                    \item Second stage: regress $(y_{t+h}-y_{t-1})$ on $\hat{r}_t$ and controls (lags of $X$)
                 \end{itemize}
                 $\lambda_h$ estimated in the second stage is the dynamic causal effect at horizon $h$.
 

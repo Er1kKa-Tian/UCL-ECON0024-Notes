@@ -184,8 +184,8 @@
                 \item $y_{it}$: formality dummy or share of formal firms
                 \item $\text{Treatment}_{it}$: formalisation treatment dummy (=1 if treated)
                 \item $X_i$ is a vector of Controls
-                \item ATE is identified ($\beta_{OLS} = E[Y_{1i}-Y_{0i}]$) under the assumption: $(Y_{1i},Y_{0i}) \perp D_i|X_i$ because there is no selection on levels/gains conditional on $X_i$
-.            \end{itemize}
+                \item ATE is identified ($\beta_{OLS} = E[Y_{1i}-Y_{0i}]$) under the assumption: $(Y_{1i},Y_{0i}) \perp D_i|X_i$ because there is no selection on levels/gains conditional on $X_i$.            
+            \end{itemize}
         \subsubsection{Results}
             \begin{figure}[H]
                 \centering
@@ -237,6 +237,17 @@
                 \caption{Effects of Formalisation through Different Channels}
             \end{figure}
             Taking a closer look at potential channels through which formalisation could affect firms' performance: we can see that nothing was significantly changed except that now formal firms have receipt books and advertise more.
+    
+    \subsection{Other Literatures}
+
+        Apart from the literature discussed in the lecture, \cite{de_andrade_helping_2014} also argues that waiving the lump-sum registration fee is not useful in promoting formalisation. They conducted a RCT in Belo Horizonte, Brazil. In one of the treatments, researchers eliminated all registration costs as well as sanitary tax, municipal inspection fee, and accounting service charge for the first year. Results are summarised in figure \ref{fig:rct brazil result} (column named "Free Cost Difference"): results are at best insignificant, at worst negative.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=5in]{images/ch6/addition registration fee waiving RCT in brazil.png}
+            \caption{Impacts on Formality (\cite{de_andrade_helping_2014})}
+            \label{fig:rct brazil result}
+        \end{figure}
         
     \subsection{Caveats When Evaluating Those Empirical Studies}
         RCTs, if correctly carried out, have no concerns about endogeneity by design, but this does not mean that RCT results can be apllied anywhere. Common problems of RCTs are:

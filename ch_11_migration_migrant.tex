@@ -369,17 +369,17 @@
             \Delta w=\frac{w_{50}^{70}-w_{50}^{80}}{30-20}
             $$
 
-            However, this FD estimator can only eliminate time-unvarying fixed effect (cohort effect), but it cannot control for differences in macroeconomic conditions (time effects) in 1970 and 1980
+            However, this FD estimator can only eliminate time-unvarying fixed effect (cohort effect), but it cannot control for differences in macroeconomic conditions (macro effects) in 1970 and 1980
 
         
-        \subsubsection{Deal with Cohort Effects + Time Effects}
+        \subsubsection{Deal with Cohort Effects + YSM Effects}
 
             To discuss this, we need to extend our estimation equations:
 
             \[
             \begin{cases}
-            \ln w_{it}^I & = b_{1}^IX_{it} + b_{2}^IEX_{it} + b_{3}^IYSM_{it} + b_{m}^IC_{im} + \gamma_{it}^IT_{it} + e_{it}^I \\
-            \ln w_{it}^N & = b_{1}^NX_{it} + b_{2}^NEX_{it} + \gamma_{t}^NT_{it} + e_{it}
+            \ln w_{it}^I & = b_{1}^IX_{it} + b_{2}^IEX_{it} + b_{3}^IYSM_{it} + b_{m}^IC_{im} + \sum_{ t=1 }^{ K }\gamma_{t}^IT_{it} + e_{it}^I \\
+            \ln w_{it}^N & = b_{1}^NX_{it} + b_{2}^NEX_{it} + \sum_{ t=1 }^{ K }\gamma_{t}^NT_{it} + e_{it}
             \end{cases}
             \]
 
@@ -389,12 +389,12 @@
                 \item $t$ is an index indicating the year in which individual $i$ is observed
                 \item $X_{it}$ is a vector of individual characteristics, e.g. gender, marital status and educational level
                 \item $EX_{it}$ is potential work experience extrapolated from data
-                \item $T_{it}=\mathds{1}[\text{Year of observation}=t]$ is a cross-section time indicating dummy which equals to 1 if individual $i$ is drawn from the cross-section in year $t$
-                \item $\gamma_{t}^I,\gamma_{t}^N$ measure the period/time effects on log wages of immigrants and natives
+                \item $T_{it}=\mathds{1}[\text{Year of observation}=t]$ is a sampling time indicating dummy which equals to 1 if individual $i$ is drawn from the cross-section in year $t$
+                \item $\gamma_{t}^I,\gamma_{t}^N$ measure the macro effects on log wages of immigrants and natives
                 \item $C_{im}$ is an indicator function, which equals to the calendar year $m$ in which immigrant $i$ arrived
             \end{itemize}
 
-            Problem: \empha{macro/time effect and cohort effect cannot be separately identified with repeated cross-sections $\implies$ we cannot estimate return to YSM without further assumptions.}
+            Problem: there is perfect multicolinearity: $YSM_{it}= T_{it}(t-C_{im})$. This means \empha{macro effect and cohort effect cannot be separately identified with repeated cross-sections $\implies$ we cannot estimate return to YSM without further assumptions.}
 
             Potential Solutions:
 
@@ -402,19 +402,19 @@
                 \item Solution 1: \emphb{Same Cohort Effect within Group}
                     \begin{itemize}
                         \item Fix $\gamma_{t}^I$ to be the same for immigrants who arrived over a number of years (e.g. a decade)
-                        \item In the extreme case where there is no time nor cohort effect, this brings us back to \cite{chiswick_effect_1978}
+                        \item In the extreme case where there is no macro nor cohort effect, this brings us back to \cite{chiswick_effect_1978}
                         \item Assumptions like this need to be carefully justified by data: if one has strong reason to believe that the inflow of immigrants over a particular period is of roughly the same quality (for instance because immigrants all arrived from one particular source country) then this may be a plausible assumption
                     \end{itemize}
-                \item Solution 2: \emphb{Same Time Effect for Immigrants and Natives}
+                \item Solution 2: \emphb{Same Macro Effect for Immigrants and Natives}
                     \begin{itemize}
-                        \item Borjas (1985) assumes that the macro/time effect is the same for immigrants and natives: $\gamma_{t}^I=\gamma_{t}^N$
-                        \item Then, we can first estimate the time/macro $\gamma_{t}^N$ effects using data of natives, and use this to identify cohort effects in the immigrant equation
+                        \item Borjas (1985) assumes that the macro effect is the same for immigrants and natives: $\gamma_{t}^I=\gamma_{t}^N$
+                        \item Then, we can first estimate the macro effects $\gamma_{t}^N$ using data of natives, and use this to identify cohort effects in the immigrant equation
                         \item Nevertheless, there are evidences suggesting that change in macroeconomic conditions is likely to have different effects on wages of natives and immigrants (Dustmann, Glitz and Vogel, EER 2010)
                     \end{itemize}
-                \item Solution 2+: \emphb{Parameterising Macro/Time Effects}
+                \item Solution 2+: \emphb{Parameterising Macro Effects}
                     \begin{itemize}
-                        \item Bratsberg et al. (2005) show that the common macro/time effect assumption leads to serious bias in assimilation profiles for the US
-                        \item The provide an alternative method of estimating $\gamma$ by parameterising the macro/time effect at regional level, allowing for different variations for immigrants and natives depending on local unemployment rates
+                        \item Bratsberg et al. (2005) show that the common macro effect assumption leads to serious bias in assimilation profiles for the US
+                        \item The provide an alternative method of estimating $\gamma$ by parameterising the macro effect at regional level, allowing for different variations for immigrants and natives depending on local unemployment rates
                     \end{itemize}
             \end{itemize}
 
