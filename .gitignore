@@ -1,0 +1,4 @@
+# Ignore aux files generated #
+main.bcf
+main.run.xml
+main.synctex.gz
