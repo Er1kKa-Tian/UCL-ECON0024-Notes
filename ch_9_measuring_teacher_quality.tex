@@ -104,9 +104,15 @@
     \subsection{Interpretation and Scale}
         
         \subsubsection{Interpretation and Distinguish Classroom FE}
-            $\alpha$ is really a fixed effect of a regression -- it measures the average performance of students taught by a particular teacher, and we call it teacher quality.
+            $\alpha$ is really a fixed effect of a regression -- it measures the average performance of students taught by a particular teacher, and we call it teacher quality. \empha{If only observe one group per teacher, $\alpha$ combines both classroom/peer and teacher FE.}
             
-            Therefore, we will need to observe at least 2 groups of students taught by the same teacher in order to distinguish classroom/peer fixed effects and teacher fixed effects. \empha{If only observe one group per teacher, $\alpha$ combines both classroom/peer and teacher FE.}
+            Therefore, we will need to observe at least 2 groups of students taught by the same teacher in order to distinguish classroom/peer fixed effects and teacher fixed effects. With such data, we can run a FE regression with both classroom and teacher FE:
+            
+            $$\underbrace{A_{ijt} - \theta A_{ij,t-1}}_{\text{Value Added}} = \gamma X_{ijt} + \alpha_{jt} + class_{ijt}+ \epsilon_{ijt}$$
+
+            After estimating this model, we should also estimate the correct standard error of $\alpha$ using empirical-based error correction or using the covariance between the VA of the same teacher but different groups/years of students. Finally, we standardise VA with the correct standard error and get the result.
+
+
         
         \subsubsection{Scale}
             The magnitude of $\alpha$ does not have a direct interpretation. Thus, we compute the standard deviation of $\alpha$, noted as $\sigma_\alpha$, and use it as the unit for $\alpha$.
