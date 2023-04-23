@@ -67,7 +67,7 @@
             \item $c^u$ is the consumption when being \emph{unemployed}
             \item $c^e$ is the consumption when being \emph{employed}
             \item $U(.)$ is the utility function: we assume it to be \emph{strictly increasing and concave} i.e. $U'(.)>0$ and $U''(.)<0$
-            \item $\psi(.)$ is the job searching cost function: we assume it to be \emph{strictly increasing and convex} i.e. $\psi'(.)>0$ and $\psi''(.)>0$
+            \item $\psi(.)$ is the job searching cost function: we assume it to be \emph{strictly increasing and convex} i.e. $\psi'(.)>0$ and $\psi''(.)>0$ (higher probability of employment $\implies$ higher searching cost)
         \end{itemize}
         
             \subsubsection{Assumptions on the individual side}
@@ -76,7 +76,7 @@
                     \item Consumption at employment equals to after-tax wage i.e. $c^e = w-t$
                     \item Consumption at unemployment equals to UI benefit i.e. $c^u = b$
                 \end{itemize}
-                With this assumption, we can express the \emph{expected utility} as:
+                With this assumption, we can express the expected utility as:
                 \begin{equation}
                     E[U] = (1-p)\times{U(w-t)} + p\times{U(b)} - \psi(1-p)
                     \label{eqn:ui_exp_utility}
@@ -88,11 +88,11 @@
                 Rearranging this equation, it indicates that taxes need to be:
                 $$t = \frac{p}{1-p}\times{b}$$
                 plug these results into the expected utility of individuals (equation \ref{eqn:ui_exp_utility}):
-                $$E[U] = (1-p)\times{U(w-\frac{p}{1-p}\times{b})} + p\times{U(b)} - \psi(1-p)$$
+                $$E[U] = (1-p)\times{U \left( w-\frac{p}{1-p}\times{b}\right)} + p\times{U(b)} - \psi(1-p)$$
                 Therefore, we can express the \emphb{government's optimisation problem} as:
                 \begin{equation}
                     \label{eqn:ui_no_mh}
-                    \max_{b} E[U] = (1-p)\times{U(w-\frac{p}{1-p}\times{b})} + p\times{U(b)} - \psi(1-p)
+                    \max_{b} E[U] = (1-p)\times{U\left( w-\frac{p}{1-p}\times{b} \right)} + p\times{U(b)} - \psi(1-p)
                     \end{equation}
                     
             \subsubsection{Further assumption: No moral hazard}
@@ -102,8 +102,8 @@
                 
         \subsection{Optimisation Result: Full Insurance}
             To find the optimal UI, we solve the optimisation problem (\ref{eqn:ui_no_mh}). The FOC is:
-            $$\frac{\partial E[U]}{\partial b}=-(1-p)\times{\frac{p}{1-p}}\times{U'(w-\frac{p}{1-p}\times{b})} + p\times{U'(b)} = 0$$
-            $$U'(b) = U'(w-\frac{p}{1-p}\times{b})$$
+            $$\frac{\partial E[U]}{\partial b}=-(1-p)\times{\frac{p}{1-p}}\times{U'\left( w-\frac{p}{1-p}\times{b} \right)} + p\times{U'(b)} = 0$$
+            $$U'(b) = U'\left( w-\frac{p}{1-p}\times{b} \right)$$
             $$\color{red} b = w-\frac{p}{1-p}\times{b}$$
             This result implies that
             \[\color{red} c^e = w-t = b = c^u\]
@@ -211,7 +211,7 @@
             \caption{Example of DiD: low earnings group as control and high earnings group as treatment}
         \end{figure}
         \begin{enumerate}
-            \item Standard DiD specification with 2 states and 2 time period
+            \item \emphb{Standard DiD Specification} with 2 states and 2 time period
             $$log(Unemployment\ Duration)_{ist} = \beta_0 + \beta_1 After_{ist} + \beta_2 Treat_{ist} + \beta_3 Treat_{ist} \times After_{ist} + \epsilon_{ist}$$
             where:
             \begin{itemize}
@@ -220,7 +220,7 @@
                 \item $Treat_{ist}$ is the treatment dummy
             \end{itemize}
             Under the \emphb{Common/Parallel Trend Assumption} (the difference in unemployment duration would have been the same between the treatment/control group in absence of the policy change), $\beta_3$ identifies the casual effect (ATT, specifically).
-            \item Fixed Effects Version\\
+            \item \emphb{Fixed Effects Version}\\
             $$log(Unemployment\ Duration)_{ist} = \alpha_s + \theta_t + \beta log(b_{ist}) + \gamma X_{ist} + \epsilon_{ist}$$
             where:
             \begin{itemize}
@@ -228,9 +228,10 @@
                 \item $\theta_t$ is the time fixed effect
                 \item $X_{ist}$ includes other control variables
             \end{itemize}
-            $\beta$ identifies the relationship between percentage change in replacement rate and percentage change in unemployment duration under FE/FD assumptions. (Correct specification; Random sampling; Time variations and no perfect multicolinearity in regressors; Zero conditional mean)\\
-            Meyer (1990) and many other implement this method using data on unemployment duration in the U.S. and state-level reforms. The general finding shows a \empha{benefit elasticity of 0.4-0.6}: 10\% rise in unemployment benefits leads to about a 4-6\% increase in unemployment duration.
+            $\beta$ identifies the relationship between percentage change in replacement rate and percentage change in unemployment duration under FE/FD assumptions. (Correct specification; Random sampling; Time variations and no perfect multicolinearity in regressors; Zero conditional mean)
         \end{enumerate}
+
+        Meyer (1990) and many others implemented this method using data on unemployment duration in the U.S. and state-level reforms. The general finding shows a \empha{benefit elasticity of 0.4-0.6}: 10\% rise in unemployment benefits leads to about a 4-6\% increase in unemployment duration.
             
     \subsection{Regression Discontinuity Designs}
         This empirical strategy exploits jumps in UI benefits at a threshold.
@@ -309,7 +310,7 @@
         Gruber identified the following equation:
         $$\frac{\Delta c}{c^e} = \beta_0 + \beta_1 \frac{b}{w_i}$$
         
-        Their results show that: $\beta_0 \approx 0.24$ and $\beta_1 \approx -0.28$. Without UI benefits, unemployment will cause a 24\% drop in consumption. With the current level of UI benefit (net benefit replacement rate $\frac{b}{w_i}=0.5$), the consumption is estimated to drop about 10\%, and \empha{a 10\% increase in UI benefits will induce a 2.8\% reduction in the consumption drop}.
+        Their results show that: $\beta_0 \approx 0.24$ and $\beta_1 \approx -0.28$, which means \empha{a 10\% increase in UI benefits will induce a 2.8\% reduction in the consumption drop}. Without UI benefits, unemployment will cause a 24\% drop in consumption. With the current level of UI benefit (net benefit replacement rate $\frac{b}{w_i}=0.5$), the consumption is estimated to drop about 10\%.
         
         This provides convincing evidence that insurance markets are not perfect and UI does play a consumption smoothing role.
         
@@ -366,7 +367,7 @@
 \section{$\star$ Implication of the Empirical Evidence on the Optimal UI}
     
     \subsection{Is Our Current UI Benefit Optimal?}
-        Recall our "sufficient statistical approach" version (equation \ref{eqn:ui_hm_sufficient}) of the Main Equation of Optimal UI:
+        Recall our ``sufficient statistical approach'' version (equation \ref{eqn:ui_hm_sufficient}) of the Main Equation of Optimal UI:
         \begin{equation*}
         \color{red}
             \underbrace{\frac{1}{1-p}\times{\epsilon_{p,b}}}_{\text{Moral\ Hazard\ Cost}} \approx \underbrace{\gamma \times \frac{\Delta c}{c^e}}_{\text{Insurance\ Value}}
@@ -414,9 +415,9 @@
         Schmieder, von Wachter and Bender (2011) conclude that, during recessions:
         \begin{itemize}
             \item the responsiveness of unemployment duration to an additional month of UI benefit is lower. ($\frac{dp}{db}$ is lower)
-            \item the probability of employment is lower ($p$ is lower) 
+            \item the probability of employment is lower ($(1-p)$ is lower or $p$ is higher)
         \end{itemize}
-        Therefore, the \empha{elasticity of unemployment rate with respect to benefits $\epsilon_{p,b}$ is lower in recessions}. This in turn indicates lower moral hazard costs, and UI benefits should be higher in recessions to optimise.
+        Therefore, the \empha{elasticity of unemployment rate with respect to benefits $\epsilon_{p,b} = \frac{b}{p} \frac{dp}{db}$ is lower in recessions}. This in turn indicates lower moral hazard costs, and UI benefits should be higher in recessions to optimise.
         \begin{figure}[H]
             \centering
             \includegraphics[width=4in]{images/ch1/Schmieder.png}

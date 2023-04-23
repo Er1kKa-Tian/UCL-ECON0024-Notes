@@ -286,8 +286,8 @@
             \begin{equation*}
                 \color{red}
                 \begin{cases}
-                    \ln w_{i}^I  & = b_{1}^IX_{i} + b_{2}^IEX_{i} + b_{3}^IYSM_{i} + e_{i}^I \\
-                    \ln w_{i}^N  & = b_{1}^NX_{i} + b_{2}^NEX_{i} + e_{i}^N
+                    \ln w_{i}^I  & = b_{0}^I + b_{1}^IEX_{i} + b_{2}^IYSM_{i} + e_{i}^I \\
+                    \ln w_{i}^N  & = b_{0}^N + b_{1}^NEX_{i} + e_{i}^N
                 \end{cases}
             \end{equation*}
 
@@ -296,15 +296,15 @@
             \begin{itemize}
                 \item $EX_i$: potential experience (computed as Age-years of schooling - 6)
                 \item $YSM_i$: Years since migration
-                \item $b_2^I$: measures the return to one year of total working experience (experience in host \& home country)
-                \item $b_3^I$: additional increase in earnings each year spent in host country
-                \item $b_2^I+b_3^I$: earnings increase per year in the host country
-                \item $b_2^N$: earnings increase of natives per year of labour market experience
+                \item $b_1^I$: measures the return to one year of total working experience (experience in host \& home country)
+                \item $b_2^I$: additional increase in earnings each year spent in host country
+                \item $b_1^I+b_2^I$: earnings increase per year in the host country
+                \item $b_1^N$: earnings increase of natives per year of labour market experience
             \end{itemize}
 
-            If $b_2^I+b_3^I > b_2^N$, earnings of immigrants grow faster in the host country than earnings of natives (\emphb{assimilation}).
+            If $b_1^I+b_2^I > b_1^N$, then the earnings of immigrants grow faster in the host country than earnings of natives (\emphb{assimilation}).
             
-            $\delta=b_2^I+b_3^I-b_2^N$ measures the \emphb{rate of convergence} of immigrant/native earnings, which represents the degree of economic assimilation.
+            $\delta=b_1^I+b_2^I-b_1^N$ measures the \emphb{rate of convergence} of immigrant/native earnings, which represents the degree of economic assimilation.
 
             \begin{figure}[H]
                 \centering
@@ -378,8 +378,8 @@
 
             \[
             \begin{cases}
-            \ln w_{it}^I & = b_{1}^IX_{it} + b_{2}^IEX_{it} + b_{3}^IYSM_{it} + b_{m}^IC_{im} + \sum_{ t=1 }^{ K }\gamma_{t}^IT_{it} + e_{it}^I \\
-            \ln w_{it}^N & = b_{1}^NX_{it} + b_{2}^NEX_{it} + \sum_{ t=1 }^{ K }\gamma_{t}^NT_{it} + e_{it}
+            \ln w_{it}^I & = b_{0}^I + b_{1}^IEX_{it} + b_{2}^IYSM_{it} + b_{m}^IC_{im} + \sum_{ t=1 }^{ K }\gamma_{t}^IT_{it} + e_{it}^I \\
+            \ln w_{it}^N & = b_{0}^N + b_{1}^NEX_{it} + \sum_{ t=1 }^{ K }\gamma_{t}^NT_{it} + e_{it}
             \end{cases}
             \]
 
@@ -387,7 +387,6 @@
 
             \begin{itemize}
                 \item $t$ is an index indicating the year in which individual $i$ is observed
-                \item $X_{it}$ is a vector of individual characteristics, e.g. gender, marital status and educational level
                 \item $EX_{it}$ is potential work experience extrapolated from data
                 \item $T_{it}=\mathds{1}[\text{Year of observation}=t]$ is a sampling time indicating dummy which equals to 1 if individual $i$ is drawn from the cross-section in year $t$
                 \item $\gamma_{t}^I,\gamma_{t}^N$ measure the macro effects on log wages of immigrants and natives
