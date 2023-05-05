@@ -29,7 +29,7 @@
             \begin{figure}[H]
                 \centering
                 \includegraphics[width=4in]{images/ch5/pervasive_informality.png}
-                \caption{Distribution of Informal Sector Size as \% of GDP}
+                \caption{Distribution of Informal Sector Size as \% of GDP of 130 countries}
             \end{figure}
             \item Informality is negatively correlated with GDP per capita
             \begin{figure}[H]
@@ -134,10 +134,13 @@
                     \caption{Transfer Into and Out of Informality (\cite{bosch_job_2012})}
                 \end{figure}
                 \begin{itemize}
+                    
+                    \item Bosch \& Esteban-Pretel (2012) use labour force survey from 1983-2001 in Brazil and use unemployment rate as a proxy for output (-0.83 corr).
                     \item Graph a: informality is counter-cyclical: when there is a recession, the informal sector occupies a higher share in the economy, providing a potential buffer
                     \item Graph b: this shows the probability with which workers find formal/informal jobs from unemployment, and it corroborates graph a: during the recession, unemployment in the formal sector shows a cyclical pattern, while unemployment in the informal sector is stable
                     \item Graph c: during the recession, job separation (destruction/layoff) increases clearly, indicating worse job security in the informal sector, since there is no firing cost
-                    \item Graph d: stable formalisation but growing dis-formalisation during the recession (graphically)
+                    \item Graph d: Direct transitions from informality to formality are procyclical (easy to see from graph) as they correlate negatively with unemployment rate. Direct transitions from formality to informality are also procyclical (less easy to see) but less volatile.
+                    %stable formalisation but growing dis-formalisation during the recession (graphically)
                 \end{itemize}
             
 \section{$\star$ Modelling Informality}
@@ -157,7 +160,7 @@
             \item $l$ is the amount of labour employed
             \item $r_f, r_i$ are capital rents (usually assume $r_f<r_i$ because formal firms have access to more loans and are considered less risky)
             \item $k$ represents capital used
-            \item $p(y(\theta))$ represents the "cost of formality," increasing and convex in firm's output $y$
+            \item $p(y(\theta))$ represents the ``cost of formality," increasing and convex in firm's output $y$
             \item $\bar{c}_f$ is the per-period fixed cost that only formal firms must pay
         \end{itemize}
         Note that, in addition to those costs, formalisation of a firm must incur in a \emph{fixed registration cost}, which varies dramatically across countries.
@@ -198,6 +201,18 @@
     \subsection{Fixed and Ongoing Costs of Formalisation: RCTs in Sri Lanka}
         This paper written by \cite{de_mel_demand_2013} used experiments in Sri Lanka to explore effects of covering registration costs and ongoing costs.
         
+        
+        \subsubsection{Empirical Strategy}
+       Quantify using randomised control trials:
+$$Y_{it}= \alpha+ \beta \times D_{it} + \gamma X_{it} + \epsilon_{it}$$
+where
+        \begin{itemize}
+        \item $Y_{it}$ is the outcome variable (e.g. binary variable on whether the firm registers as formal or not
+        \item $D_{it}$ is a binary variable indicating whether i is treated
+        \item $X_{it}$ is a vector of controls
+        \item Key assumption: $(Y_{0i}, Y_{1i}) \perp D_i|X_i$
+        \end{itemize}
+        
         \subsubsection{Research Designs and Treatments}
             \begin{itemize}
                 \item Treatment 1: Provide information + Cover direct monetary costs of firm registrations
@@ -220,6 +235,15 @@
             The figure above shows the Intention-to-Treat (ITT) and Treatment on the Treated (ATT) estimates of corresponding treatment (on the rows). ITT is calculated by directly regressing the formality dummy on the treatment dummy and covariates. ATT is identified as LATE using invitation as an IV for treatment.\par
             Results indicate that only covering the fixed cost of registration is not enough to induce firms to formalise (ITT/ATT of treatment 1 are not significant). Treatment with additional money to cover ongoing costs are more effective, and their effects increase with the amount of payment, as indicated by figures in the red square.
             
+Treatment 1: Firms given information on procedure to become formal \& reimbursed costs of becoming formal: only 1 (of 104 firms) switched to become formal   $\Leftrightarrow\hat{\beta} = 0$
+
+Treatment 2: Treatment 1: Firms given information on procedure followed to become formal, reimbursed costs of becoming formal \& given 10,000LKR: 16 switched to become formal $\Leftrightarrow\hat{\beta}= 0.134$
+
+Treatment 3: Treatment 1: Firms given information on procedure followed to become formal, reimbursed costs of becoming formal \& given 20,000LKR: 13 switched to become formal   $\Leftrightarrow\hat{\beta}= 0.105$
+
+Treatment 4:Firms given information on procedure followed to become formal, reimbursed costs of becoming formal \& given 40,000LKR: 30 switched to become formal    $\Leftrightarrow\hat{\beta}= 0.275$          
+
+            
         \subsubsection{Results: Effects of Formalisation on Firms' Performance}
             \begin{figure}[H]
                 \centering
@@ -235,7 +259,7 @@
             Taking a closer look at potential channels through which formalisation could affect firms' performance: we can see that nothing was significantly changed except that now formal firms have receipt books and advertise more.
         
     \subsection{Caveats When Evaluating Those Empirical Studies}
-        RCTs, if correctly carried out, have no concerns about endogeneity by design, but this does not mean that RCT results can be apllied anywhere. Common problems of RCTs are:
+        RCTs, if correctly carried out, have no concerns about endogeneity by design, but this does not mean that RCT results can be applied anywhere. Common problems of RCTs are:
         \begin{itemize}
             \item RCTs are costly, so typically researchers can only obtain a \emph{small sample}. This casts doubts on the external validity and general equilibrium effects of RCT results
             \item There could be \emph{multiple equilibria} in an economy, depending on the level of informality, trust on government, etc.

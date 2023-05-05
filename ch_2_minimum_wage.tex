@@ -45,7 +45,7 @@
         \subsubsection{George Stigler (1946): Price Theory}
             \begin{itemize}
                 \item There is no free lunch
-                \item Minimum wage decreaes employment and leads to efficiency loss
+                \item Minimum wage decreases employment and leads to efficiency loss
                 \item (This is a testable prediction)
             \end{itemize}
             
@@ -67,12 +67,12 @@
                 \item \textbf{Consensus}: Chicago-style approach/price theory captures what happens in response to a minimum wage
             \end{itemize}
     
-\section{Consensus Breaks: Modern Empirical Evidences}
+\section{Consensus Breaks: Modern Empirical Evidence}
 
     \subsection{Card and Krueger (1994, 1995) and the “Credibility Revolution”}
     
         \subsubsection{Card and Krueger (1994, 1995)}
-            Card and Krueger (1994, 1995) studied the impact of an increasing minimum wage in New Jersey with a Difference-in-Difference approach. Their control group is Pennsylvania where there was no minimum wage hike. Their results showed that the increase in minimum wage \empha{increased both wages and employment} in New Jersey. This contradicted the neoclassical model.
+            Card and Krueger (1994, 1995) studied the impact of an increasing minimum wage in New Jersey with a Difference-in-Differences approach. Their control group is Pennsylvania where there was no minimum wage hike. Their results showed that the increase in minimum wage \empha{increased both wages and employment} in New Jersey. This contradicted the neoclassical model.
             \begin{itemize}
                 \item Their DiD design:
                 $$\Delta E_i = \alpha + \beta 'X_i + \gamma NJ_i + \epsilon_i$$
@@ -99,10 +99,10 @@
                 \item Economic models are important as they can capture the most important mechanisms at play
                 \item Simplicity is value, but we should not be dogmatic about our models
                 \item We need “credible” research designs, that could be used to reject or accept the key predictions of our models
-                \item Alan Krueger (2018): “The idea of turning economics into a true empirical science, where core theoriescan be rejected, is a BIG, revolutionary idea.”
+                \item Alan Krueger (2018): “The idea of turning economics into a true empirical science, where core theories can be rejected, is a BIG, revolutionary idea.”
             \end{itemize}
     
-    \subsection{New Mimimum Wage Research}
+    \subsection{New Minimum Wage Research}
         New minimum wage research shifted the focus from theory to \emphb{"reduced form"} empirical evidence on employment and wages, investigating the impact of minimum wages directly.
         
         The U.S. has been a fertile ground due to state-level variations that can be exploited:
@@ -131,15 +131,26 @@
         \end{figure}
         The key empirical challenge of this method is to get counterfactual wage distribution. The solution is to use a DiD idea.
         
-        During 1999-2000, Washington State raised its minimum wage from \$7.51 to \$9.18, and WA has administrative data on hourly wages. We divide the distribution by wage bins, and calculate the counterfactual by:
-        $$$$
+        During 1999-2000, Washington State raised its minimum wage from \$7.51 to \$9.18, and WA has administrative data on hourly wages. 
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=3.5in]{Screenshot 2023-04-14 113517.png}
+            \caption{Actual number of Jobs in Wage Bin k}
+        \end{figure}
+        We divide the distribution by wage bins, and calculate the counterfactual by:
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=3.5in]{Screenshot 2023-04-14 114001.png}
+            \caption{Counterfactual Number of Jobs in Wage Bin k (Post MW Increase)}
+        \end{figure}
+        
         With this method, Cengiz et al. obtained both actual and counterfactual employment distributions:
         \begin{figure}[H]
             \centering
             \includegraphics[width=3.5in]{images/ch2/Freq_approach_3.png}
             \caption{Actual and Counterfactual Distributions}
         \end{figure}
-        Comparing the two distributions, the effect of an increase in minimum wage is retrieved. The patter of change matches Figure \ref{fig:freq_approach}, and, as shown by the red line, there is a redistribution of employment from jobs with wages below the threshold to jobs with wages above the threshold. No reduction in overall employment is observed:
+        Comparing the two distributions, the effect of an increase in minimum wage is retrieved (actual distribution - counterfactual distribution). The pattern of change matches Figure \ref{fig:freq_approach}, and, as shown by the red line, there is a redistribution of employment from jobs with wages below the threshold to jobs with wages above the threshold. No reduction in overall employment is observed:
         \begin{figure}[H]
             \centering
             \includegraphics[width=6.5in]{images/ch2/Freq_approach_4.png}
@@ -167,10 +178,10 @@
     \subsection{Firm's Problem and Equilibrium}
     
         \subsubsection{Assumptions}
-            Empirical research presented in the previous section show no evidence that an increase in minimum wage will cause dis-employment. This indicates that assumptions we made for the standard neoclassical "price theory" model do not hold. In reality:
+            Empirical research presented in the previous section show no evidence that an increase in minimum wage will cause dis-employment. This indicates that the assumptions we made for the standard neoclassical "price theory" model do not hold. In reality:
             \begin{itemize}
-                \item Workspaces are differentiated (not homogeneous)
-                \item Such differentiation provides each employer with some market power
+                \item Workplaces are differentiated (not homogeneous)
+                \item Such differentiation provides each employer with some market power (monopsonistic power)
                 \item The labour market is a \emphb{monopsonistic market}
             \end{itemize}
             The intuition is that, because some workers want to work at a certain firm, the employer can hire them with lower wages. This creates a wedge between productivity and wages. In equilibrium, fewer workers are hired and wages are lower.
@@ -179,8 +190,7 @@
             Firms maximise their profits:
             $$\max_{L_j} pf(L_j) - w(L_j)L_j$$
             The FOC implies that:
-            $$\color{red} \underbrace{pf'(L_j)}_{\text{Marginal\ Revenue\ Product}} = \underbrace{w(L_j)\left(1+\frac{1}{\eta}\right)}_{\text{Marginal\ Cost}}$$
-            where $\eta$ is the \emphb{elasticity of firm-level labour supply} defined as $\eta = \frac{\partial L_j}{\partial w}\frac{w}{L_j} > 0$.
+            $$\color{red} \underbrace{pf'(L_j)}_{\text{Marginal\ Revenue\ Product}} = \underbrace{w(L_j)\left(1+\frac{1}{\eta}\right)}_{\text{Marginal\ Cost}}$$where $\eta$ is the \emphb{elasticity of firm-level labour supply} defined as $\eta = \frac{\partial L_j}{\partial w}\frac{w}{L_j} > 0$.
             The \emphb{equilibrium wage} in monopsonistic model is:
             $$\color{red} w^*(L_j)= \underbrace{pf'(L_j)}_{\text{Marginal\ Revenue\ Product}} \times \underbrace{\frac{1}{1+\frac{1}{\eta}}}_{\text{Mark-down}(<1)} < w^*_{Neoclassical}$$
             The equilibrium wage here is different from the marginal revenue product: firms enjoy a "\emphb{markdown}." The magnitude of such difference depends on firm-level elasticity of labour supply: if $\eta \rightarrow \infty$, we get back to the neoclassical framework.
@@ -269,7 +279,15 @@
                 \begin{itemize}
                     \item Firms paying higher wage premium
                     \item Firms with lower turnover
-                    \item Firms with larger sizes higher productivity
+                    \item Firms with larger sizes and higher productivity
                 \end{itemize}
             \end{itemize}
-            This indicates that minimum wages reallocate workers to more productive firms, contributing productivity improvement. The welfare implication is more ambiguous since there's evidence that workers' commuting distance increased.
+            This indicates that minimum wages reallocate workers to more productive firms, contributing to productivity improvement. The welfare implication is more ambiguous since there's evidence that workers' commuting distance increased.
+            
+            \section{Conclusions}
+            \begin{itemize}
+            \item MW has limited employment effects at current levels.
+            \item MW affects the worker-firm allocation, and could potentially increase productivity in certain cases.
+            \item Prominent interest in MW, since it allows "testing" competing explanations on how the low-wage labour market operates
+            \item Standard competition model fails to capture key aspects, and such model is widely used to study the impact of taxes and transfers on low-wage workers.
+            \end{itemize}

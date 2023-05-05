@@ -119,7 +119,7 @@
         Now, individuals choose their probability of being unemployed $p$ given the unemployment benefit $b$:
         $$\max_p E[U] = (1-p)\times{U(c^e)} + p\times{U(c^u)} - \psi(1-p)$$
         The FOC of this problem is:
-        $$\frac{\partial E[U]}{\partial p}=-U(c^e)+E(c^u)+\psi'(1-p) = 0$$
+        $$\frac{\partial E[U]}{\partial p}=-U(c^e)+U(c^u)+\psi'(1-p) = 0$$
         Manipulate:
         $$Pr(employed) = 1-p = \psi'^{-1}\Big(U(c^e)-U(c^u)\Big)$$
         Note that $c^e, c^u$ are also functions of $b$:
@@ -186,7 +186,7 @@
                 \item $\gamma$ is the coefficient of relative risk aversion (higher RRA indicates more risk aversion)
                 \item $\epsilon_{p,b} = \frac{b}{p}\frac{dp}{db}$ is the elasticity of unemployment rate with respect to benefits
             \end{itemize}
-            We call this the \emphb{Sufficient Statistic Approach} because the optimal UI can be calculated aftering measuring the above three factors.
+            We call this the \emphb{Sufficient Statistic Approach} because the optimal UI can be calculated after measuring the above three factors.
             
         \subsubsection{Pros and Cons of the Sufficient Statistic Approach}
             The alternative method of determining the optimal UI benefit is known as the \emphb{structural labour approach}:
@@ -211,7 +211,7 @@
             \caption{Example of DiD: low earnings group as control and high earnings group as treatment}
         \end{figure}
         \begin{enumerate}
-            \item Standard DiD specification with 2 states and 2 time period
+            \item Standard DiD specification with 2 states and 2 time periods
             $$log(Unemployment\ Duration)_{ist} = \beta_0 + \beta_1 After_{ist} + \beta_2 Treat_{ist} + \beta_3 Treat_{ist} \times After_{ist} + \epsilon_{ist}$$
             where:
             \begin{itemize}
@@ -219,7 +219,7 @@
                 \item $After_{ist}$ is the time dummy
                 \item $Treat_{ist}$ is the treatment dummy
             \end{itemize}
-            Under the \emphb{Common/Parallel Trend Assumption} (the difference in unemployment duration would have been the same between the treatment/control group in absence of the policy change), $\beta_3$ identifies the casual effect (ATT, specifically).
+            Under the \emphb{Common/Parallel Trend Assumption} (the difference in unemployment duration would have been the same between the treatment/control group in absence of the policy change), $\beta_3$ identifies the causal effect (ATT, specifically).
             \item Fixed Effects Version\\
             $$log(Unemployment\ Duration)_{ist} = \alpha_s + \theta_t + \beta log(b_{ist}) + \gamma X_{ist} + \epsilon_{ist}$$
             where:
@@ -228,8 +228,8 @@
                 \item $\theta_t$ is the time fixed effect
                 \item $X_{ist}$ includes other control variables
             \end{itemize}
-            $\beta$ identifies the relationship between percentage change in replacement rate and percentage change in unemployment duration under FE/FD assumptions. (Correct specification; Random sampling; Time variations and no perfect multicolinearity in regressors; Zero conditional mean)\\
-            Meyer (1990) and many other implement this method using data on unemployment duration in the U.S. and state-level reforms. The general finding shows a \empha{benefit elasticity of 0.4-0.6}: 10\% rise in unemployment benefits leads to about a 4-6\% increase in unemployment duration.
+            $\beta$ identifies the relationship between the percentage change in replacement rate and the percentage change in unemployment duration under FE/FD assumptions. (Correct specification; Random sampling; Time variations and no perfect multicollinearity in regressors; Zero conditional mean)\\
+            Meyer (1990) and many others implement this method using data on unemployment duration in the U.S. and state-level reforms. The general finding shows a \empha{benefit elasticity of 0.4-0.6}: 10\% rise in unemployment benefits leads to about a 4-6\% increase in unemployment duration.
         \end{enumerate}
             
     \subsection{Regression Discontinuity Designs}
@@ -242,14 +242,14 @@
             \item There are other policy changes that affect outcomes at the threshold.
         \end{itemize}
         Example:\\
-        Card-Chetty-Weber (2007) used the fact that in Austria, you get up to 30 weeks of benefits when you have been employed for 36+ months in last 5 years (instead of up to 20 weeks).
+        Card-Chetty-Weber (2007) used the fact that in Austria, you get up to 30 weeks of benefits when you have been employed for 36+ months in the last 5 years (instead of up to 20 weeks).
         \begin{figure}[H]
             \centering
             \includegraphics[width=3 in]{images/ch1/card_1.png}
             \caption{Jump in UI Benefit}
             \label{fig:card_1}
         \end{figure}
-        They checked: (1) there is no selection around the threshold (on frequency of layoffs, age, wages, etc.) (2) there is no other policy change at the threshold.
+        They checked: (1) there is no selection around the threshold (on the frequency of layoffs, age, wages, etc.) (2) there is no other policy change at the threshold.
         \begin{figure}[H]
             \centering
             \includegraphics[width=4 in]{images/ch1/card_2.png}
@@ -301,7 +301,7 @@
                 \end{itemize}
         
 \section{Evidence on Consumption Smoothing ($\frac{\Delta c}{c^e}$)}
-    The evidence on consumption smoothing is more limited. The key constraint is data: while we have millions of observations of unemployment duration (administrative records), data on consumption is often restricted to surveys, which contain much less samples. (Typically, we need a large sample size to use RDD/RKD.)
+    The evidence on consumption smoothing is more limited. The key constraint is data: while we have millions of observations of unemployment duration (administrative records), data on consumption is often restricted to surveys, which contain much fewer samples. (Typically, we need a large sample size to use RDD/RKD.)
     
     \subsection{Difference-in-Difference}
         The settings are similar to the DiD strategy mentioned before. Gruber (1997) used food consumption as the dependent variable, and used cross-state and time variations. The dataset used is PSID food consumption.
@@ -313,13 +313,13 @@
         
         This provides convincing evidence that insurance markets are not perfect and UI does play a consumption smoothing role.
         
-        Note that the drop in benefit-level and the drop in consumption is much less than 1-1. This is because UI also affects people's \emphb{Self Insurance} behaviour:
+        Note that the drop in benefit level and the drop in consumption is much less than 1-1. This is because UI also affects people's \emphb{Self Insurance} behaviour:
         \begin{itemize}
             \item Saving behaviours
-            \item Spousal labor supply
+            \item Spousal labour supply
             \item Borrowing from friends
         \end{itemize}
-        Provision of UI benefits crowds out such self insurance to some extent.
+        The provision of UI benefits crowds out such self-insurance to some extent.
     
     \subsection{Using Data of Bank Accounts}
     
@@ -354,7 +354,7 @@
         The figure above clearly indicates that, during unemployment, people are spending more than their income, suggesting that they are smoothing their consumption.
         
     \subsection{Using Administrative Data}
-        Kolsrud, Landais, Nilsson and Spinnewijn (2016) uses administrative data on unemployment, which is linked to data on income and wealth in Sweden. They use income and wealth changes to create a registry-based consumption measure. Again, this overcomes the small sample problem present in survey data.
+        Kolsrud, Landais, Nilsson and Spinnewijn (2016) use administrative data on unemployment, which is linked to data on income and wealth in Sweden. They use income and wealth changes to create a registry-based consumption measure. Again, this overcomes the small sample problem present in survey data.
         \begin{figure}[H]
             \centering
             \includegraphics[width=4in]{images/ch1/Kolsrud_1.png}
@@ -371,7 +371,7 @@
         \color{red}
             \underbrace{\frac{1}{1-p}\times{\epsilon_{p,b}}}_{\text{Moral\ Hazard\ Cost}} \approx \underbrace{\gamma \times \frac{\Delta c}{c^e}}_{\text{Insurance\ Value}}
         \end{equation*}
-        From our empirical researches:
+        From our empirical research:
         \begin{itemize}
             \item Consumption drop $\frac{\Delta c}{c^e}$ is around 10\%
             \item Elasticity of probability of unemployment with respect to UI benefit level $\epsilon_{p,b}$ is around 0.3
@@ -414,7 +414,7 @@
         Schmieder, von Wachter and Bender (2011) conclude that, during recessions:
         \begin{itemize}
             \item the responsiveness of unemployment duration to an additional month of UI benefit is lower. ($\frac{dp}{db}$ is lower)
-            \item the probability of employment is lower ($p$ is lower) 
+            \item the probability of unemployment is higher ($p$ is higher) 
         \end{itemize}
         Therefore, the \empha{elasticity of unemployment rate with respect to benefits $\epsilon_{p,b}$ is lower in recessions}. This in turn indicates lower moral hazard costs, and UI benefits should be higher in recessions to optimise.
         \begin{figure}[H]
@@ -436,7 +436,7 @@
     
     Which of these dominates is an empirical question:
     \begin{itemize}
-        \item Card, Chetty, and Weber (2007) exploit the same discontinuity in Austria to examine the effect on subsequent wages or on subsequent job tenure, and found no significant improvement
+        \item Card, Chetty, and Weber (2007) exploit the same discontinuity in Austria to examine the effect on subsequent wages or on subsequent job tenure, and found no significant improvement.
         \item Schmieder et al. (2015) use RDD to examine the effect of extending UI eligibility from 12 months to 18 months at age 42 in Germany. They found non-employment duration increases by 1 months while re-employment wage decrease by 3\%, supporting skill deprecation.
         \item Nekoei and Weber (2015) use RDD to examine the effect of extending UI eligibility from 7.5 months to 9.5 months at age 42 in Austria. They find that non-employment duration increases by 3 days, and they also find positive effects on wages, suggesting that UI benefits improve matching quality.
     \end{itemize}
